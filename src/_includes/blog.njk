@@ -1,0 +1,18 @@
+---
+ layout: 'base.njk'
+---
+<section class="container px-[10%] rounded-3xl py-16 grid grid-cols-2 items-center text-gray-400 bg-zinc-950">
+<div class="grid justify-self-center">
+    <img class="w-80" src="{{image}}" alt="{{image-alt}}">
+    <p class="text-center text-4xl">{{title}}</p>
+</div>  
+    <div class="leading-[3rem] text-2xl font-light">
+        <p>{{subtitle}}</p>
+        <p>{{description}}</p>
+        <p>{{license}}</p>
+        <div class="mt-8 gap-8">
+        <a href="{{github}}" class="border border-sky-500 bg-sky-500 text-zinc-800 px-16 py-1 hover:text-sky-500 hover:bg-transparent duration-500 transition ease-in-out  rounded-full">Github</a>
+        <a href="{{link}}" class="border border-sky-500 text-sky-500 px-16 py-1 rounded-full hover:text-zinc-800 hover:bg-sky-500 duration-500 transition ease-in-out">Visit Website</a>
+        </div>
+    </div>
+</section>
