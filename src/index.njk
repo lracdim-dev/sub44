@@ -3,7 +3,7 @@
  title: Free Alternatives Useful Software
 ---
 
-<section class="container justify-self-center rounded-3xl bg-zinc-950/50 h-[50vh] w-full py-8">
+<section class="container justify-self-center rounded-3xl bg-zinc-950/50 h-[40vh] w-full py-8">
 <p class="text-center text-gray-400 text-6xl font-normal py-16 px-[10%]">BEST OPENSOURCE ALTERNATIVES OF YOUR FAVORITE AI, APPS & MANY MORE.</p>
     <form class=" mx-auto w-[800px]">   
         <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
@@ -13,8 +13,11 @@
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
                 </svg>
             </div>
-            <input type="search" id="default-search" class="block w-full p-4 ps-10 text-xl text-gray-900  rounded-lg bg-zinc-900 dark:placeholder-gray-400 dark:text-white " placeholder="Search . . ." required />
-            <button type="submit" class="text-zinc-800 absolute end-2.5 bottom-2.5 bg-sky-500 hover:bg-sky-600   rounded-lg text-lg px-8 py-2 ">Search</button>
+            <input type="text" id="myInput" onkeyup="myFunction()" class="block w-full p-4 ps-10 text-xl text-gray-900  rounded-lg bg-zinc-900 dark:placeholder-gray-400 dark:text-white " placeholder="Search . . ." required />
+
+
+            
+           
         </div>
     </form>
 </section>
@@ -27,7 +30,7 @@
     <p>Communication</p>
     <p>Dev Tools</p>
     <p>Graphics</p>
-    <p>Wordpress</p>
+    <a href="/wp"><p>Wordpress</p></a>
 
 
 </div>
@@ -36,21 +39,30 @@
 
 </section>
 <section class="container ">
-    <div class="px-[10%]  rounded-3xl bg-zinc-950/50 w-full py-4 text-gray-400 text-lg mt-4">
-    <ul class="grid grid-cols-3 gap-6 w-full py-16">
-
-        {% for video in collections.video %}
+    <div class="px-[10%]  rounded-3xl bg-zinc-950/50 py-4 text-gray-400 text-lg mt-4">
+        <div class="flex justify-between items-center">
+            <p class="text-sky-500 text-3xl py-4">Video / Video Editor</p>
+            <a href="/videos" class="text-lg underline">More tools</a>
+            
+        </div>
+    <ul class="grid grid-cols-5 gap-4 w-full py-16" id="myUL">
+    
+        {% for video in collections.video | reverse %} 
+        {%- if loop.index0 < 5 -%}
         <a href="{{video.url}}">
-            <li class="bg-zinc-900 p-8 rounded-3xl  h-80">
-                <img src="{{video.data.image}}" alt="{{image-alt}}" class="w-36 rounded-full">
-                <div>
-                    <p class="text-sky-500 pt-6 pb-4 text-2xl">{{video.data.title}}</p>
-                    <p>{{video.data.description}}</p>
+            <li class="bg-zinc-900 p-8 rounded-3xl  ">
+                <p class="text-sky-500 text-lg pb-4 text-right">{{video.data.type}}</p>
+
+                <img src="{{video.data.image}}" alt="{{video.data.image-alt}}" class="w-36 rounded-full">
+                <div class="">
+                    <p class="text-sky-500 py-4  text-2xl">{{video.data.title}}</p>
+                    <!-- <p>{{video.data.description}}</p> -->
                 </div>
 
             </li>
 
         </a>
+        {%- endif -%}
         {% endfor %}
     </ul>  
     
@@ -59,4 +71,67 @@
     
     
     
-    </section>
+</section>
+<section class="container ">
+    <div class="px-[10%]  rounded-3xl bg-zinc-950/50 w-full py-4 text-gray-400 text-lg mt-4">
+        <div class="flex justify-between items-center">
+            <p class="text-sky-500 text-3xl py-4">CRM</p>
+            <a href="/crm" class="text-lg underline">More tools</a>
+            
+        </div>
+    <ul class="grid grid-cols-5 gap-4 w-full py-16">
+    
+        {% for crm in collections.crm | reverse %} 
+        {%- if loop.index0 < 5 -%}
+        <a href="{{crm.url}}">
+            <li class="bg-zinc-900 p-8 rounded-3xl  ">
+                <p class="text-sky-500 text-lg pb-4 text-right">{{crm.data.type}}</p>
+
+                <img src="{{crm.data.image}}" alt="{{crm.data.image-alt}}" class="w-36 rounded-full">
+                <div class="">
+                    <p class="text-sky-500 py-4  text-2xl">{{crm.data.title}}</p>
+                    <!-- <p>{{crm.data.description}}</p> -->
+                </div>
+
+            </li>
+
+        </a>
+        {%- endif -%}
+        {% endfor %}
+    </ul>  
+    
+    
+    </div>
+    
+    
+    
+</section>
+
+
+<section class=" mt-16">
+    <div class="bg-zinc-950 p-16 grid grid-cols-6 container gap-4 rounded-3xl items-center ">
+        <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"><i class="fa-brands fa-html5"></i></p></div>
+        <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"></p></div>
+        <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"><i class="fa-brands fa-js"></i></p></div>
+        <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"></p></div>
+        <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"><i class="fa-brands fa-css3"></i></p></div>
+        <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"></p></div>
+        <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"></p></div>
+        <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"><i class="fa-brands fa-rust"></i></p></div>
+       
+        <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-full bg-zinc-700 col-span-2 row-span-2">2</div>
+        <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"><i class="fa-brands fa-php"></i></p></div> 
+        <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"></p></div> 
+        <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"><i class="fa-brands fa-python"></i></p></div>
+        <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"></p></div> 
+        <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"></p></div> 
+        <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"><i class="fa-brands fa-golang"></i></p></div> 
+        <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"><i class="fa-brands fa-html5"></i></p></div> 
+        <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"><i class="fa-brands fa-html5"></i></p></div> 
+        <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"><i class="fa-brands fa-html5"></i></p></div>  <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"><i class="fa-brands fa-html5"></i></p></div>
+        <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"><i class="fa-brands fa-html5"></i></p></div>
+        <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"><i class="fa-brands fa-html5"></i></p></div>
+       
+      
+</div>
+</section> 

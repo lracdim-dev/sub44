@@ -1,0 +1,33 @@
+---
+ layout: wp-base.njk
+ title: Download Free Themes
+---
+<div class="bg-white pt-16">
+<section class="container ">
+    <p class="text-center text-5xl pb-16">FREE THEMES</p>
+    <div class="px-[10%]  rounded-3xl bg-gray-200 w-full py-4 text-gray-400 text-lg mt-4">
+      
+    <ul class="grid grid-cols-3 gap-6 w-full py-16 ">
+
+        {% for theme in collections.theme %}
+        <a href="{{theme.url}}">
+            <li class="bg-white p-8 rounded-3xl  h-auto shadow shadow-xl">
+                <img src="{{theme.data.image}}" alt="{{theme.data.image-alt}}" class="w-[300px] ">
+                <div>
+                    <p class="text-sky-800 pt-6 pb-4 text-2xl">{{theme.data.title}}</p>
+                    <p class="text-zinc-900">{{theme.data.type}}</p>
+                </div>
+
+            </li>
+
+        </a>
+        {% endfor %}
+    </ul>  
+    
+    
+    </div>
+    
+    
+    
+</section>
+</div>
