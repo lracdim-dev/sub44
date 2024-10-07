@@ -1,23 +1,34 @@
 ---
- layout: wp-base.njk
+layout: wp-base.njk
 ---
-<section class="bg-white container px-[10%] rounded-3xl py-16 grid grid-cols-2 gap-8  text-gray-400 bg-zinc-950 mt-16">
-<div class="grid justify-self-center">
-   
-    <img class="mb-4" src="{{image}}" alt="{{image-alt}}">
-    <p class="pr-8 text-2xl font-light">{{description2}}</p>
-    <p class="text-lg  text-sky-500 my-8">Tags: {{type}}</p>
-</div>  
+<section class="bg-white ">
+<div class="container px-[10%] rounded-3xl py-16 grid grid-cols-2 gap-8  text-gray-600 pt-16">
+    <div class="grid ">
+
+        <img class="mb-4 max-w-[300px]" src="{{image}}" alt="{{image-alt}}">
+        <p class="pr-8 text-2xl font-light">{{description2}}</p>
+        <p class="text-lg  text-sky-500 my-8">Tags: {{type}}</p>
+    </div>
     <div class=" text-2xl ">
-      
+
         <p class=" text-4xl font-bold text-sky-500">{{title}}</p>
         <p class="py-2">{{description}}</p>
         <div class="mt-8 gap-8">
-        <a href="{{download}}" class="border border-sky-500 bg-sky-500 text-zinc-800 px-16 py-1 hover:text-sky-500 hover:bg-transparent duration-500 transition ease-in-out  rounded-full">Download</a>
-        <a href="{{link}}" class="border border-sky-500 text-sky-500 px-16 py-1 rounded-full hover:text-zinc-800 hover:bg-sky-500 duration-500 transition ease-in-out">Visit Website</a>
+          
+            <a href="{{link}}"
+                class="border border-sky-500 text-sky-500 px-16 py-1 rounded-full hover:text-zinc-800 hover:bg-sky-500 duration-500 transition ease-in-out">Visit
+                Website</a>
         </div>
-    </div>
 
-    {{ content | safe }}
-   
+       
+    </div>
+    <div class="">
+        <p class='text-5xl '>Download link</p>
+        <p class='text-xl pt-10'>{{links}}</p>
+    </div>
+    <div>
+    <p class="text-5xl">Features</p>
+    <p class="text-xl pt-10">{{features}}</p>
+    </div>
+</div>
 </section>

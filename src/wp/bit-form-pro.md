@@ -6,6 +6,7 @@
  type: Plugins
  link: https://wpforms.com/
  download: https://oymog.com/be59fb4d753965d5/wpforms_v1.9.1.2.zip
+ features: []
 ---
 - Drag & Drop Form Builder
 - Create & manage your form with 40+ drag & drop form fields.

@@ -15,6 +15,32 @@
 
     {% include "footer.njk" %}
     
-    <script src="/main.js"></script>
+  
+
+
+
+
+
+
+
+<script>
+ function myFunction() {
+  const searchInput = document.getElementById("myInput");
+  const searchTerm = searchInput.value.toLowerCase(); // Ensure case-insensitive search
+  const searchResultsContainer = document.querySelector("[data-search-results]"); // Target container for search results
+  const searchResults = searchResultsContainer.querySelectorAll("[data-search-item]"); // Select all search items
+
+  // Filter search results based on search term
+  searchResults.forEach(searchResult => {
+    const searchItemText = searchResult.textContent.toLowerCase();
+    const match = searchItemText.includes(searchTerm);
+
+    searchResult.style.display = match ? "block" : "none";
+  });
+}
+
+</script>
+
+    
 </body>
 </html>

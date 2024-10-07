@@ -1,0 +1,6 @@
+{
+    "markdown.copyFiles.destination": {
+        "md": "md"
+    },
+    "notebook.gotoSymbols.showAllSymbols": true
+}

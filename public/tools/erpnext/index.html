@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Erpnext</title>
+    <script src="https://kit.fontawesome.com/d032355450.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-zinc-900">
+
+    <header class="container text-gray-300 flex justify-between items-center py-4 px-16">
+   <a href="/">
+    <img class="w-36" src="/assets/logo.webp" alt="main-logo">
+    </a>
+<ul class="flex gap-4">
+    <li class="text-xl hover:text-sky-500"><a href="/wp">WordPress Tools</a></li>
+    <!-- <li><a class='border border-sky-500 py-4 px-8  rounded-full hover:bg-sky-500 hover:text-black' href="">Subscribe for the latest update</a></li> -->
+</ul>
+    
+
+
+</header>
+
+    <section class="container px-[10%] rounded-3xl py-16 grid grid-cols-2 gap-8 items-center text-gray-400 bg-zinc-950 mt-16">
+<div class="grid justify-self-center">
+   
+    <img class="w-48 mb-4" src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be49b66bece7f208d26f_XRrh9qPujFapn2HE891UakAQmp2ZmJNIGJDIyOVOZfk.png" alt="NaN">
+    <p class="pr-8 text-2xl font-light">ERPNext is a comprehensive open-source enterprise resource planning (ERP) solution that offers a wide range of modules to manage various business functions. From accounting and inventory to CRM and manufacturing, ERPNext provides a unified platform to streamline operations and improve efficiency. It is highly customizable and can be adapted to fit the specific needs of businesses of all sizes.</p>
+    <p class="text-lg  text-sky-500 my-8">Tags: CRM</p>
+</div>  
+    <div class="leading-[3rem] text-2xl ">
+      
+        <p class=" text-4xl font-bold text-sky-500">Erpnext</p>
+        <p>Open Source Alternative to Salesforce, SAP</p>
+        <p>Free and Open Source Enterprise Resource Planning (ERP)</p>
+        <p>GPL V3</p>
+        <div class="mt-8 gap-8">
+        <a href="https://github.com/frappe/erpnext" class="border border-sky-500 bg-sky-500 text-zinc-800 px-16 py-1 hover:text-sky-500 hover:bg-transparent duration-500 transition ease-in-out  rounded-full">Github</a>
+        <a href="https://erpnext.com/" class="border border-sky-500 text-sky-500 px-16 py-1 rounded-full hover:text-zinc-800 hover:bg-sky-500 duration-500 transition ease-in-out">Visit Website</a>
+        </div>
+    </div>
+   
+</section>
+
+    
+    
+  
+
+
+
+
+
+
+
+<script>
+ function myFunction() {
+  const searchInput = document.getElementById("myInput");
+  const searchTerm = searchInput.value.toLowerCase(); // Ensure case-insensitive search
+  const searchResultsContainer = document.querySelector("[data-search-results]"); // Target container for search results
+  const searchResults = searchResultsContainer.querySelectorAll("[data-search-item]"); // Select all search items
+
+  // Filter search results based on search term
+  searchResults.forEach(searchResult => {
+    const searchItemText = searchResult.textContent.toLowerCase();
+    const match = searchItemText.includes(searchTerm);
+
+    searchResult.style.display = match ? "block" : "none";
+  });
+}
+
+</script>
+
+    
+</body>
+</html>

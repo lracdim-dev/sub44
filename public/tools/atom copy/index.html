@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Atom</title>
+    <script src="https://kit.fontawesome.com/d032355450.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-zinc-900">
+
+    <header class="container text-gray-300 flex justify-between items-center py-4 px-16">
+   <a href="/">
+    <img class="w-36" src="/assets/logo.webp" alt="main-logo">
+</a>
+
+    <a class='border border-sky-500 py-4 px-8  rounded-full hover:bg-sky-500 hover:text-black' href="">Subscribe for the latest update</a>
+
+</header>
+
+    <section class="container px-[10%] rounded-3xl py-16 grid grid-cols-2 gap-8 items-center text-gray-400 bg-zinc-950 mt-16">
+<div class="grid justify-self-center">
+   
+    <img class="w-48 mb-4" src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be21dbcfa982e5435f95_0Me_z-9TheH8NTSkigJ5RAW3wMqYwcsaE8ST3f3kOgU.png" alt="NaN">
+    <p class="pr-8 text-2xl font-light">Atom is a free and open-source text editor that&#39;s popular among developers and programmers. It&#39;s known for its user-friendly interface and extensive customization options, allowing users to tailor it to their specific needs. Atom is built on Electron, a framework that allows it to run on multiple platforms, including Windows, macOS, and Linux. With its built-in package manager, users can easily install and manage plugins to enhance its functionality and integrate with various tools and services.</p>
+    <p class="text-lg  text-sky-500 my-8">Tags: Dev</p>
+</div>  
+    <div class="leading-[3rem] text-2xl ">
+      
+        <p class=" text-4xl font-bold text-sky-500">Atom</p>
+        <p>Open Source Alternative to Visual Studio Code, Sublime Text</p>
+        <p>The hackable text editor</p>
+        <p>MIT</p>
+        <div class="mt-8 gap-8">
+        <a href="https://github.com/atom/atom" class="border border-sky-500 bg-sky-500 text-zinc-800 px-16 py-1 hover:text-sky-500 hover:bg-transparent duration-500 transition ease-in-out  rounded-full">Github</a>
+        <a href="https://github.blog/news-insights/product-news/sunsetting-atom/" class="border border-sky-500 text-sky-500 px-16 py-1 rounded-full hover:text-zinc-800 hover:bg-sky-500 duration-500 transition ease-in-out">Visit Website</a>
+        </div>
+    </div>
+   
+</section>
+
+    
+    
+  
+
+
+
+
+
+
+
+<script>
+ function myFunction() {
+  const searchInput = document.getElementById("myInput");
+  const searchTerm = searchInput.value.toLowerCase(); // Ensure case-insensitive search
+  const searchResultsContainer = document.querySelector("[data-search-results]"); // Target container for search results
+  const searchResults = searchResultsContainer.querySelectorAll("[data-search-item]"); // Select all search items
+
+  // Filter search results based on search term
+  searchResults.forEach(searchResult => {
+    const searchItemText = searchResult.textContent.toLowerCase();
+    const match = searchItemText.includes(searchTerm);
+
+    searchResult.style.display = match ? "block" : "none";
+  });
+}
+
+</script>
+
+    
+</body>
+</html>

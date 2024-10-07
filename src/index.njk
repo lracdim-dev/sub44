@@ -3,113 +3,96 @@
  title: Free Alternatives Useful Software
 ---
 
-<section class="container justify-self-center rounded-3xl bg-zinc-950/50 h-[40vh] w-full py-8">
-<p class="text-center text-gray-400 text-6xl font-normal py-16 px-[10%]">BEST OPENSOURCE ALTERNATIVES OF YOUR FAVORITE AI, APPS & MANY MORE.</p>
-    <form class=" mx-auto w-[800px]">   
-        <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-        <div class="relative">
-            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-                </svg>
-            </div>
-            <input type="text" id="myInput" onkeyup="myFunction()" class="block w-full p-4 ps-10 text-xl text-gray-900  rounded-lg bg-zinc-900 dark:placeholder-gray-400 dark:text-white " placeholder="Search . . ." required />
+<section class="container grid justify-self-center rounded-3xl bg-zinc-950/50  w-full py-16">
+<p class="text-center text-gray-400 text-7xl font-normal px-[10%] pb-8">YOUR <span class="text-sky-500">FREE</span> ALL-IN-ONE SHOP FOR YOUR FAVORITE TOOLS.</p>
+<form class=" mx-auto w-[800px]">
+    <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+    <div class="relative">
+      <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+        </svg>
+      </div>
+      <input type="text" id="searchInput" onkeyup="searchFunction()" class="block w-full p-4 ps-10 text-xl text-gray-900 rounded-lg bg-zinc-900 dark:placeholder-gray-400 dark:text-white" placeholder="Search . . ." required />
+    </div>
+  </form>
 
-
-            
-           
-        </div>
-    </form>
 </section>
+
 
 <section class="container">
-<div class=" flex justify-around rounded-3xl bg-zinc-950/50 w-full py-4 text-gray-400 text-lg mt-4">
-    <p>AI</p>
-    <p>CRM</p>
-    <p>Platform as a Service</p>
-    <p>Communication</p>
-    <p>Dev Tools</p>
-    <p>Graphics</p>
-    <a href="/wp"><p>Wordpress</p></a>
+  <div class="px-8 rounded-3xl bg-zinc-950/50 py-4 text-gray-400 text-lg mt-4">
+    <div class="flex justify-between items-center">
+      <p class="text-sky-500 text-3xl py-4 hidden">Search Results</p>
+    </div>
+    <ul class="grid grid-cols-5 gap-4 w-full py-8" id="searchResults">
+      {% for tools in collections.tools | reverse %}
+    
+      <a href="{{tools.url}}" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+        <li class="bg-zinc-900 p-8 rounded-3xl">
+          <p class="text-pink-500 text-lg pb-4 text-right">{{tools.data.type}}</p>
+          <img src="{{tools.data.image}}" alt="{{tools.data.image-alt}}" class="w-36 rounded-full">
+          <div class="">
+            <h1 class="text-sky-500 py-4 text-2xl">{{tools.data.title}}</h1>
+          </div>
+        </li>
+      </a>
 
-
-</div>
-
-
-
+      {% endfor %}
+    </ul>
+    
+  </div>
 </section>
+
+
+<!-- 
 <section class="container ">
-    <div class="px-[10%]  rounded-3xl bg-zinc-950/50 py-4 text-gray-400 text-lg mt-4">
+    <div class="px-8  rounded-3xl bg-zinc-950/50 py-4 text-gray-400 text-lg mt-4">
         <div class="flex justify-between items-center">
-            <p class="text-sky-500 text-3xl py-4">Video / Video Editor</p>
-            <a href="/videos" class="text-lg underline">More tools</a>
+            <p class="text-sky-500 text-3xl py-4"></p>
+           
             
         </div>
-    <ul class="grid grid-cols-5 gap-4 w-full py-16" id="myUL">
+    <ul class="grid grid-cols-3 gap-4 w-full py-8" id="myUL">
     
-        {% for video in collections.video | reverse %} 
-        {%- if loop.index0 < 5 -%}
-        <a href="{{video.url}}">
-            <li class="bg-zinc-900 p-8 rounded-3xl  ">
-                <p class="text-sky-500 text-lg pb-4 text-right">{{video.data.type}}</p>
+        {% for wp in collections.latest | reverse %}
+        {%- if loop.index0 < 6 -%}
+       
+       
+        <a href="{{wp.url}}" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out">
+            <li class="bg-zinc-900 p-8 rounded-3xl h-[400px]  ">
+                <p class="text-pink-500 text-lg pb-4 text-right">{{wp.data.type}}</p>
 
-                <img src="{{video.data.image}}" alt="{{video.data.image-alt}}" class="w-36 rounded-full">
+                <img src="{{wp.data.image}}" alt="{{wp.data.image-alt}}" class="w-full rounded-xl">
                 <div class="">
-                    <p class="text-sky-500 py-4  text-2xl">{{video.data.title}}</p>
+                    <h1 class="text-sky-500 py-4  text-2xl" id="t-tools">{{wp.data.title}}</h1>
                     <!-- <p>{{video.data.description}}</p> -->
-                </div>
+                <!-- </div>
 
             </li>
 
         </a>
-        {%- endif -%}
+    {% endif %}
         {% endfor %}
     </ul>  
-    
-    
+    <div class="flex justify-center">
+    <a href="/wp" class="text-2xl underline text-sky-500 hover:text-pink-500 transition duration-500 ease-in-out">More tools</a>
     </div>
-    
-    
-    
-</section>
-<section class="container ">
-    <div class="px-[10%]  rounded-3xl bg-zinc-950/50 w-full py-4 text-gray-400 text-lg mt-4">
-        <div class="flex justify-between items-center">
-            <p class="text-sky-500 text-3xl py-4">CRM</p>
-            <a href="/crm" class="text-lg underline">More tools</a>
-            
-        </div>
-    <ul class="grid grid-cols-5 gap-4 w-full py-16">
-    
-        {% for crm in collections.crm | reverse %} 
-        {%- if loop.index0 < 5 -%}
-        <a href="{{crm.url}}">
-            <li class="bg-zinc-900 p-8 rounded-3xl  ">
-                <p class="text-sky-500 text-lg pb-4 text-right">{{crm.data.type}}</p>
-
-                <img src="{{crm.data.image}}" alt="{{crm.data.image-alt}}" class="w-36 rounded-full">
-                <div class="">
-                    <p class="text-sky-500 py-4  text-2xl">{{crm.data.title}}</p>
-                    <!-- <p>{{crm.data.description}}</p> -->
-                </div>
-
-            </li>
-
-        </a>
-        {%- endif -%}
-        {% endfor %}
-    </ul>  
-    
-    
     </div>
+   
     
     
-    
-</section>
+</section> --> -->
 
 
+
+<!-- 
 <section class=" mt-16">
     <div class="bg-zinc-950 p-16 grid grid-cols-6 container gap-4 rounded-3xl items-center ">
+        <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"></p></div>
+        <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"><i class="fa-brands fa-html5"></i></p></div>
+        <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"><i class="fa-brands fa-html5"></i></p></div>
+        <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"><i class="fa-brands fa-html5"></i></p></div>
         <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"><i class="fa-brands fa-html5"></i></p></div>
         <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"></p></div>
         <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"><i class="fa-brands fa-js"></i></p></div>
@@ -119,7 +102,6 @@
         <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"></p></div>
         <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"><i class="fa-brands fa-rust"></i></p></div>
        
-        <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-full bg-zinc-700 col-span-2 row-span-2">2</div>
         <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"><i class="fa-brands fa-php"></i></p></div> 
         <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"></p></div> 
         <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"><i class="fa-brands fa-python"></i></p></div>
@@ -134,4 +116,34 @@
        
       
 </div>
-</section> 
+</section>  -->
+
+
+
+
+
+<script>
+    function searchFunction() {
+      // Declare variables
+      let input = document.getElementById('searchInput');
+      let filter = input.value.toUpperCase();
+      let ul = document.getElementById("searchResults");
+      let items = ul.getElementsByClassName('search-item');
+      
+      // Loop through all list items, and hide those who don't match the search query
+      for (let i = 0; i < items.length; i++) {
+        let title = items[i].getElementsByTagName("h1")[0];
+        if (title) {
+          let txtValue = title.textContent || title.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            items[i].style.display = "";
+          } else {
+            items[i].style.display = "none";
+          }
+        }
+      }
+    }
+
+
+    
+  </script>

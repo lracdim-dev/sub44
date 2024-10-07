@@ -12,208 +12,397 @@
     <header class="container text-gray-300 flex justify-between items-center py-4 px-16">
    <a href="/">
     <img class="w-36" src="/assets/logo.webp" alt="main-logo">
-</a>
+    </a>
+<ul class="flex gap-4">
+    <li class="text-xl hover:text-sky-500"><a href="/wp">WordPress Tools</a></li>
+    <!-- <li><a class='border border-sky-500 py-4 px-8  rounded-full hover:bg-sky-500 hover:text-black' href="">Subscribe for the latest update</a></li> -->
+</ul>
+    
 
-    <a class='border border-sky-500 py-4 px-8  rounded-full hover:bg-sky-500 hover:text-black' href="">Subscribe for the latest update</a>
 
 </header>
 
     
-<section class="container justify-self-center rounded-3xl bg-zinc-950/50 h-[40vh] w-full py-8">
-<p class="text-center text-gray-400 text-6xl font-normal py-16 px-[10%]">BEST OPENSOURCE ALTERNATIVES OF YOUR FAVORITE AI, APPS & MANY MORE.</p>
-    <form class=" mx-auto w-[800px]">   
-        <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-        <div class="relative">
-            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-                </svg>
-            </div>
-            <input type="text" id="myInput" onkeyup="myFunction()" class="block w-full p-4 ps-10 text-xl text-gray-900  rounded-lg bg-zinc-900 dark:placeholder-gray-400 dark:text-white " placeholder="Search . . ." required />
+<section class="container grid justify-self-center rounded-3xl bg-zinc-950/50  w-full py-16">
+<p class="text-center text-gray-400 text-7xl font-normal px-[10%] pb-8">YOUR <span class="text-sky-500">FREE</span> ALL-IN-ONE SHOP FOR YOUR FAVORITE TOOLS.</p>
+<form class=" mx-auto w-[800px]">
+    <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+    <div class="relative">
+      <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+        </svg>
+      </div>
+      <input type="text" id="searchInput" onkeyup="searchFunction()" class="block w-full p-4 ps-10 text-xl text-gray-900 rounded-lg bg-zinc-900 dark:placeholder-gray-400 dark:text-white" placeholder="Search . . ." required />
+    </div>
+  </form>
 
-
-            
-           
-        </div>
-    </form>
 </section>
+
 
 <section class="container">
-<div class=" flex justify-around rounded-3xl bg-zinc-950/50 w-full py-4 text-gray-400 text-lg mt-4">
-    <p>AI</p>
-    <p>CRM</p>
-    <p>Platform as a Service</p>
-    <p>Communication</p>
-    <p>Dev Tools</p>
-    <p>Graphics</p>
-    <a href="/wp"><p>Wordpress</p></a>
+  <div class="px-8 rounded-3xl bg-zinc-950/50 py-4 text-gray-400 text-lg mt-4">
+    <div class="flex justify-between items-center">
+      <p class="text-sky-500 text-3xl py-4 hidden">Search Results</p>
+    </div>
+    <ul class="grid grid-cols-5 gap-4 w-full py-8" id="searchResults">
+      
+    
+      <a href="/tools/strapi/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+        <li class="bg-zinc-900 p-8 rounded-3xl">
+          <p class="text-pink-500 text-lg pb-4 text-right">CMS</p>
+          <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5db5969a827c27b89c710_15MSXynfRCDCpwMQ3ySbl_cl3eQxrE8Pi1ndPLSSKTY.png" alt="NaN" class="w-36 rounded-full">
+          <div class="">
+            <h1 class="text-sky-500 py-4 text-2xl">Strapi</h1>
+          </div>
+        </li>
+      </a>
 
+      
+    
+      <a href="/tools/hoppscotch/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+        <li class="bg-zinc-900 p-8 rounded-3xl">
+          <p class="text-pink-500 text-lg pb-4 text-right">API</p>
+          <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be6926f4c055e24ecf07_MueIhTFxHMZim7RQY9cP0KhnkG7OWBnKiCJGMaupcTU.png" alt="NaN" class="w-36 rounded-full">
+          <div class="">
+            <h1 class="text-sky-500 py-4 text-2xl">Hoppscotch</h1>
+          </div>
+        </li>
+      </a>
 
-</div>
+      
+    
+      <a href="/tools/grafana/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+        <li class="bg-zinc-900 p-8 rounded-3xl">
+          <p class="text-pink-500 text-lg pb-4 text-right">Monitoring</p>
+          <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be60560ab02eaa952e0a_n2epjjlTS3PiwUe8HBJD9kWqA3_EnZvVznsOTNTb9XA.png" alt="NaN" class="w-36 rounded-full">
+          <div class="">
+            <h1 class="text-sky-500 py-4 text-2xl">Grafana</h1>
+          </div>
+        </li>
+      </a>
 
+      
+    
+      <a href="/tools/atom/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+        <li class="bg-zinc-900 p-8 rounded-3xl">
+          <p class="text-pink-500 text-lg pb-4 text-right">Dev</p>
+          <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be21dbcfa982e5435f95_0Me_z-9TheH8NTSkigJ5RAW3wMqYwcsaE8ST3f3kOgU.png" alt="NaN" class="w-36 rounded-full">
+          <div class="">
+            <h1 class="text-sky-500 py-4 text-2xl">Atom</h1>
+          </div>
+        </li>
+      </a>
 
+      
+    
+      <a href="/tools/rustdesk/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+        <li class="bg-zinc-900 p-8 rounded-3xl">
+          <p class="text-pink-500 text-lg pb-4 text-right">Remote</p>
+          <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5bed678ddae3874ffca7d_AueBPXc1rFNNSB_TPErXyMqoh9deeZh8OrO-TPGGPns.png" alt="NaN" class="w-36 rounded-full">
+          <div class="">
+            <h1 class="text-sky-500 py-4 text-2xl">Rustdesk</h1>
+          </div>
+        </li>
+      </a>
 
+      
+    
+      <a href="/tools/supabase/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+        <li class="bg-zinc-900 p-8 rounded-3xl">
+          <p class="text-pink-500 text-lg pb-4 text-right">Backend</p>
+          <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5bef4624f4d0058716c0f_VDtxBtX7cmqcMWrlcwqXwnqT35m43Tc_uzudV5i_RVU.svg" alt="NaN" class="w-36 rounded-full">
+          <div class="">
+            <h1 class="text-sky-500 py-4 text-2xl">Supabase</h1>
+          </div>
+        </li>
+      </a>
+
+      
+    
+      <a href="/tools/netdata/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+        <li class="bg-zinc-900 p-8 rounded-3xl">
+          <p class="text-pink-500 text-lg pb-4 text-right">Monitoring</p>
+          <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be9dbf1f1b00ccc6f2d6_PTTvIwO0qH7D5x8nJ4cz8ZyEH98MJOu6-KoS6Y-Lb50.png" alt="NaN" class="w-36 rounded-full">
+          <div class="">
+            <h1 class="text-sky-500 py-4 text-2xl">Netdata</h1>
+          </div>
+        </li>
+      </a>
+
+      
+    
+      <a href="/tools/core/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+        <li class="bg-zinc-900 p-8 rounded-3xl">
+          <p class="text-pink-500 text-lg pb-4 text-right">Automation</p>
+          <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be3b26f4c03d584ece66_dFCHvbeRTAYL4C-XUINZWLFwoFCfiXqGXAWB8tyOO64.png" alt="NaN" class="w-36 rounded-full">
+          <div class="">
+            <h1 class="text-sky-500 py-4 text-2xl">Core</h1>
+          </div>
+        </li>
+      </a>
+
+      
+    
+      <a href="/tools/neovim/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+        <li class="bg-zinc-900 p-8 rounded-3xl">
+          <p class="text-pink-500 text-lg pb-4 text-right">Dev Tools</p>
+          <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be9bb0461e8ac6185877_8Z2aUh1NUeEc2RakIsLbf_dwO0Bhv2RR6PCPwwgVP70.png" alt="NaN" class="w-36 rounded-full">
+          <div class="">
+            <h1 class="text-sky-500 py-4 text-2xl">Neovim</h1>
+          </div>
+        </li>
+      </a>
+
+      
+    
+      <a href="/tools/godot/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+        <li class="bg-zinc-900 p-8 rounded-3xl">
+          <p class="text-pink-500 text-lg pb-4 text-right">Games</p>
+          <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be5fa48cd54615f97807__ygyj6lM28W2fWxEYzLW0Vsse4cu2L2NgbDFtTA07kE.png" alt="NaN" class="w-36 rounded-full">
+          <div class="">
+            <h1 class="text-sky-500 py-4 text-2xl">Godot</h1>
+          </div>
+        </li>
+      </a>
+
+      
+    
+      <a href="/tools/rrweb/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+        <li class="bg-zinc-900 p-8 rounded-3xl">
+          <p class="text-pink-500 text-lg pb-4 text-right">Video</p>
+          <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5bed5ba46915b6254b0c8_z8n7jo1ikbzu-XP75RsruFe8zgn7nrOINebs69ywApo.png" alt="NaN" class="w-36 rounded-full">
+          <div class="">
+            <h1 class="text-sky-500 py-4 text-2xl">RRWeb</h1>
+          </div>
+        </li>
+      </a>
+
+      
+    
+      <a href="/tools/obs/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+        <li class="bg-zinc-900 p-8 rounded-3xl">
+          <p class="text-pink-500 text-lg pb-4 text-right">Video</p>
+          <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5bea3217aae311abe2a9e_jHZIVysHf1VBw0147wKWYVx_SmXiGzAR0F39Yo9M4q0.png" alt="NaN" class="w-36 rounded-full">
+          <div class="">
+            <h1 class="text-sky-500 py-4 text-2xl">OBS</h1>
+          </div>
+        </li>
+      </a>
+
+      
+    
+      <a href="/tools/mpv/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+        <li class="bg-zinc-900 p-8 rounded-3xl">
+          <p class="text-pink-500 text-lg pb-4 text-right">Video</p>
+          <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be980c1e1567e4338553_2cgsWsoPcEWG9-ONCsRjNhNhOMMQ4feaYnKOF5OwI3g.png" alt="NaN" class="w-36 rounded-full">
+          <div class="">
+            <h1 class="text-sky-500 py-4 text-2xl">MPV</h1>
+          </div>
+        </li>
+      </a>
+
+      
+    
+      <a href="/tools/losslesscut/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+        <li class="bg-zinc-900 p-8 rounded-3xl">
+          <p class="text-pink-500 text-lg pb-4 text-right">Video</p>
+          <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be83b0461efef018359e_hdEBzAucOJY7_fGr7uNi1ii8p7vuiLSul1yQ_xubhoM.svg" alt="NaN" class="w-36 rounded-full">
+          <div class="">
+            <h1 class="text-sky-500 py-4 text-2xl">Losslesscut</h1>
+          </div>
+        </li>
+      </a>
+
+      
+    
+      <a href="/tools/freetube/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+        <li class="bg-zinc-900 p-8 rounded-3xl">
+          <p class="text-pink-500 text-lg pb-4 text-right">Video</p>
+          <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be567ac0d68e5a5c9fa0_ebyjy4OPBMZb3n_1NqOmKOqFVLRyzS-Vc8icB0cYF_s.png" alt="NaN" class="w-36 rounded-full">
+          <div class="">
+            <h1 class="text-sky-500 py-4 text-2xl">Freetube</h1>
+          </div>
+        </li>
+      </a>
+
+      
+    
+      <a href="/tools/blender/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+        <li class="bg-zinc-900 p-8 rounded-3xl">
+          <p class="text-pink-500 text-lg pb-4 text-right">Video</p>
+          <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be2a9f7ecc4368afe11e_wpN2O23Egrd3wHx494hium9aZ1tOFMDivJR4tkFlS6k.png" alt="NaN" class="w-36 rounded-full">
+          <div class="">
+            <h1 class="text-sky-500 py-4 text-2xl">Blender</h1>
+          </div>
+        </li>
+      </a>
+
+      
+    
+      <a href="/tools/yetiforce/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+        <li class="bg-zinc-900 p-8 rounded-3xl">
+          <p class="text-pink-500 text-lg pb-4 text-right">CRM</p>
+          <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5bf0e0c1e15dba73408eb_XIGrPIdbMOypBOMMr21zSrzArXrYYAbob8lnMNDjIcE-p-500.png" alt="NaN" class="w-36 rounded-full">
+          <div class="">
+            <h1 class="text-sky-500 py-4 text-2xl">YetiForce</h1>
+          </div>
+        </li>
+      </a>
+
+      
+    
+      <a href="/tools/suitecrm/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+        <li class="bg-zinc-900 p-8 rounded-3xl">
+          <p class="text-pink-500 text-lg pb-4 text-right">CRM</p>
+          <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5bef372638c42f9bfe7c7_4I9apDb_o-mfBoKYAiOi4tPAZ0FFM2pTU2rbSSJ9894.png" alt="NaN" class="w-36 rounded-full">
+          <div class="">
+            <h1 class="text-sky-500 py-4 text-2xl">SuiteCRM</h1>
+          </div>
+        </li>
+      </a>
+
+      
+    
+      <a href="/tools/odoo/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+        <li class="bg-zinc-900 p-8 rounded-3xl">
+          <p class="text-pink-500 text-lg pb-4 text-right">CRM</p>
+          <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5bea46eab50c72dc79ad6_3RstTic_eh67vLMwRorKyiPANrBPYamMw5XbTIu3MQg.png" alt="NaN" class="w-36 rounded-full">
+          <div class="">
+            <h1 class="text-sky-500 py-4 text-2xl">Odoo</h1>
+          </div>
+        </li>
+      </a>
+
+      
+    
+      <a href="/tools/krayin/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+        <li class="bg-zinc-900 p-8 rounded-3xl">
+          <p class="text-pink-500 text-lg pb-4 text-right">CRM</p>
+          <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be78ba4691d1345446ce_3M7kyc9m3sOD-c3gJdEqCWqTeCcp7PVPCqYylDCOaY8.png" alt="NaN" class="w-36 rounded-full">
+          <div class="">
+            <h1 class="text-sky-500 py-4 text-2xl">Krayin</h1>
+          </div>
+        </li>
+      </a>
+
+      
+    
+      <a href="/tools/illa/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+        <li class="bg-zinc-900 p-8 rounded-3xl">
+          <p class="text-pink-500 text-lg pb-4 text-right">CRM</p>
+          <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be6ad805070ab46090bd_0IziaftCeyzL5VQFmhXc3gD_Wwqz73SzElBp97gpKpY.png" alt="NaN" class="w-36 rounded-full">
+          <div class="">
+            <h1 class="text-sky-500 py-4 text-2xl">Illa</h1>
+          </div>
+        </li>
+      </a>
+
+      
+    
+      <a href="/tools/erpnext/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+        <li class="bg-zinc-900 p-8 rounded-3xl">
+          <p class="text-pink-500 text-lg pb-4 text-right">CRM</p>
+          <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be49b66bece7f208d26f_XRrh9qPujFapn2HE891UakAQmp2ZmJNIGJDIyOVOZfk.png" alt="NaN" class="w-36 rounded-full">
+          <div class="">
+            <h1 class="text-sky-500 py-4 text-2xl">Erpnext</h1>
+          </div>
+        </li>
+      </a>
+
+      
+    </ul>
+    
+  </div>
 </section>
+
+
+<!-- 
 <section class="container ">
-    <div class="px-[10%]  rounded-3xl bg-zinc-950/50 py-4 text-gray-400 text-lg mt-4">
+    <div class="px-8  rounded-3xl bg-zinc-950/50 py-4 text-gray-400 text-lg mt-4">
         <div class="flex justify-between items-center">
-            <p class="text-sky-500 text-3xl py-4">Video / Video Editor</p>
-            <a href="/videos" class="text-lg underline">More tools</a>
+            <p class="text-sky-500 text-3xl py-4"></p>
+           
             
         </div>
-    <ul class="grid grid-cols-5 gap-4 w-full py-16" id="myUL">
+    <ul class="grid grid-cols-3 gap-4 w-full py-8" id="myUL">
     
-        <a href="/tools/video/blender/">
-            <li class="bg-zinc-900 p-8 rounded-3xl  ">
-                <p class="text-sky-500 text-lg pb-4 text-right">Video</p>
+        <a href="/wp/elessi/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out">
+            <li class="bg-zinc-900 p-8 rounded-3xl h-[400px]  ">
+                <p class="text-pink-500 text-lg pb-4 text-right">Plugins</p>
 
-                <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be2a9f7ecc4368afe11e_wpN2O23Egrd3wHx494hium9aZ1tOFMDivJR4tkFlS6k.png" alt="NaN" class="w-36 rounded-full">
+                <img src="data:image/png;base64,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" alt="NaN" class="w-full rounded-xl">
                 <div class="">
-                    <p class="text-sky-500 py-4  text-2xl">Blender</p>
-                    <!-- <p>Official mirror of Blender</p> -->
-                </div>
-
-            </li>
-
-        </a><a href="/tools/video/freetube/">
-            <li class="bg-zinc-900 p-8 rounded-3xl  ">
-                <p class="text-sky-500 text-lg pb-4 text-right">Video</p>
-
-                <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be567ac0d68e5a5c9fa0_ebyjy4OPBMZb3n_1NqOmKOqFVLRyzS-Vc8icB0cYF_s.png" alt="NaN" class="w-36 rounded-full">
-                <div class="">
-                    <p class="text-sky-500 py-4  text-2xl">Freetube</p>
-                    <!-- <p>An Open Source YouTube app for privacy</p> -->
-                </div>
-
-            </li>
-
-        </a><a href="/tools/video/rrweb/">
-            <li class="bg-zinc-900 p-8 rounded-3xl  ">
-                <p class="text-sky-500 text-lg pb-4 text-right">Video</p>
-
-                <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5bed5ba46915b6254b0c8_z8n7jo1ikbzu-XP75RsruFe8zgn7nrOINebs69ywApo.png" alt="NaN" class="w-36 rounded-full">
-                <div class="">
-                    <p class="text-sky-500 py-4  text-2xl">RRWeb</p>
-                    <!-- <p>Record and replay the web</p> -->
-                </div>
-
-            </li>
-
-        </a><a href="/tools/video/losslesscut/">
-            <li class="bg-zinc-900 p-8 rounded-3xl  ">
-                <p class="text-sky-500 text-lg pb-4 text-right">Video</p>
-
-                <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be83b0461efef018359e_hdEBzAucOJY7_fGr7uNi1ii8p7vuiLSul1yQ_xubhoM.svg" alt="NaN" class="w-36 rounded-full">
-                <div class="">
-                    <p class="text-sky-500 py-4  text-2xl">Losslesscut</p>
-                    <!-- <p>The swiss army knife of lossless video/audio editing</p> -->
-                </div>
-
-            </li>
-
-        </a><a href="/tools/video/mpv/">
-            <li class="bg-zinc-900 p-8 rounded-3xl  ">
-                <p class="text-sky-500 text-lg pb-4 text-right">Video</p>
-
-                <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be980c1e1567e4338553_2cgsWsoPcEWG9-ONCsRjNhNhOMMQ4feaYnKOF5OwI3g.png" alt="NaN" class="w-36 rounded-full">
-                <div class="">
-                    <p class="text-sky-500 py-4  text-2xl">MPV</p>
-                    <!-- <p>Command line video player</p> -->
-                </div>
+                    <h1 class="text-sky-500 py-4  text-2xl" id="t-tools">FireBox Pro v2.1.21 - A WordPress Popup Builder that boosts conversion rate</h1>
+                    <!-- <p></p> -->
+                <!-- </div>
 
             </li>
 
         </a>
-    </ul>  
     
-    
-    </div>
-    
-    
-    
-</section>
-<section class="container ">
-    <div class="px-[10%]  rounded-3xl bg-zinc-950/50 w-full py-4 text-gray-400 text-lg mt-4">
-        <div class="flex justify-between items-center">
-            <p class="text-sky-500 text-3xl py-4">CRM</p>
-            <a href="/crm" class="text-lg underline">More tools</a>
-            
-        </div>
-    <ul class="grid grid-cols-5 gap-4 w-full py-16">
-    
-        <a href="/tools/crm/yetiforce/">
-            <li class="bg-zinc-900 p-8 rounded-3xl  ">
-                <p class="text-sky-500 text-lg pb-4 text-right">CRM</p>
+        <a href="/wp/wpforms-elite/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out">
+            <li class="bg-zinc-900 p-8 rounded-3xl h-[400px]  ">
+                <p class="text-pink-500 text-lg pb-4 text-right">Plugins</p>
 
-                <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5bf0e0c1e15dba73408eb_XIGrPIdbMOypBOMMr21zSrzArXrYYAbob8lnMNDjIcE-p-500.png" alt="NaN" class="w-36 rounded-full">
+                <img src="https://weadown.com/wp-content/uploads/2023/05/WPForms-Elite-1.8.1.3-Nulled-Addons-Drag-Drop-WordPress-Forms-Plugin.jpg" alt="NaN" class="w-full rounded-xl">
                 <div class="">
-                    <p class="text-sky-500 py-4  text-2xl">YetiForce CRM</p>
-                    <!-- <p>One of the most innovative CRM systems that supports mainly business processes</p> -->
-                </div>
-
-            </li>
-
-        </a><a href="/tools/crm/suitecrm/">
-            <li class="bg-zinc-900 p-8 rounded-3xl  ">
-                <p class="text-sky-500 text-lg pb-4 text-right">CRM</p>
-
-                <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5bef372638c42f9bfe7c7_4I9apDb_o-mfBoKYAiOi4tPAZ0FFM2pTU2rbSSJ9894.png" alt="NaN" class="w-36 rounded-full">
-                <div class="">
-                    <p class="text-sky-500 py-4  text-2xl">SuiteCRM</p>
-                    <!-- <p>SuiteCRM - Open source CRM for the world</p> -->
-                </div>
-
-            </li>
-
-        </a><a href="/tools/crm/krayin/">
-            <li class="bg-zinc-900 p-8 rounded-3xl  ">
-                <p class="text-sky-500 text-lg pb-4 text-right">CRM</p>
-
-                <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be78ba4691d1345446ce_3M7kyc9m3sOD-c3gJdEqCWqTeCcp7PVPCqYylDCOaY8.png" alt="NaN" class="w-36 rounded-full">
-                <div class="">
-                    <p class="text-sky-500 py-4  text-2xl">Krayin</p>
-                    <!-- <p>Free &amp; Opensource Laravel CRM solution for complete customer lifecycle management.</p> -->
-                </div>
-
-            </li>
-
-        </a><a href="/tools/crm/illa/">
-            <li class="bg-zinc-900 p-8 rounded-3xl  ">
-                <p class="text-sky-500 text-lg pb-4 text-right">CRM</p>
-
-                <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be6ad805070ab46090bd_0IziaftCeyzL5VQFmhXc3gD_Wwqz73SzElBp97gpKpY.png" alt="NaN" class="w-36 rounded-full">
-                <div class="">
-                    <p class="text-sky-500 py-4  text-2xl">Illa</p>
-                    <!-- <p>Low-code platform allows you to build business apps.</p> -->
-                </div>
-
-            </li>
-
-        </a><a href="/tools/crm/erpnext/">
-            <li class="bg-zinc-900 p-8 rounded-3xl  ">
-                <p class="text-sky-500 text-lg pb-4 text-right">CRM</p>
-
-                <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be49b66bece7f208d26f_XRrh9qPujFapn2HE891UakAQmp2ZmJNIGJDIyOVOZfk.png" alt="NaN" class="w-36 rounded-full">
-                <div class="">
-                    <p class="text-sky-500 py-4  text-2xl">Erpnext</p>
-                    <!-- <p>Free and Open Source Enterprise Resource Planning (ERP)</p> -->
-                </div>
+                    <h1 class="text-sky-500 py-4  text-2xl" id="t-tools">Bit Form Pro 2.9.0 – WordPress Form Builder</h1>
+                    <!-- <p></p> -->
+                <!-- </div>
 
             </li>
 
         </a>
+    
+        <a href="/wp/webnus-modern-events-calendar-pro-v7150/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out">
+            <li class="bg-zinc-900 p-8 rounded-3xl h-[400px]  ">
+                <p class="text-pink-500 text-lg pb-4 text-right">Themes</p>
+
+                <img src="https://ostraining.com/wp-content/uploads/images/wordpress/modern-calendar/Modern-Events-Calendar.jpg" alt="NaN" class="w-full rounded-xl">
+                <div class="">
+                    <h1 class="text-sky-500 py-4  text-2xl" id="t-tools">Webnus Modern Events Calendar Pro v7.15.0</h1>
+                    <!-- <p></p> -->
+                <!-- </div>
+
+            </li>
+
+        </a>
+    
+        <a href="/wp/bit-form-pro/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out">
+            <li class="bg-zinc-900 p-8 rounded-3xl h-[400px]  ">
+                <p class="text-pink-500 text-lg pb-4 text-right">Plugins</p>
+
+                <img src="https://weadown.com/wp-content/uploads/2024/02/Bit-Form-Pro-2.6.5-WordPress-Form-Builder.jpg" alt="NaN" class="w-full rounded-xl">
+                <div class="">
+                    <h1 class="text-sky-500 py-4  text-2xl" id="t-tools">Bit Form Pro 2.9.0 – WordPress Form Builder</h1>
+                    <!-- <p></p> -->
+                <!-- </div>
+
+            </li>
+
+        </a>
+    
+        
     </ul>  
-    
-    
+    <div class="flex justify-center">
+    <a href="/wp" class="text-2xl underline text-sky-500 hover:text-pink-500 transition duration-500 ease-in-out">More tools</a>
     </div>
+    </div>
+   
     
     
-    
-</section>
+</section> --> -->
 
 
+
+<!-- 
 <section class=" mt-16">
     <div class="bg-zinc-950 p-16 grid grid-cols-6 container gap-4 rounded-3xl items-center ">
+        <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"></p></div>
+        <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"><i class="fa-brands fa-html5"></i></p></div>
+        <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"><i class="fa-brands fa-html5"></i></p></div>
+        <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"><i class="fa-brands fa-html5"></i></p></div>
         <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"><i class="fa-brands fa-html5"></i></p></div>
         <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"></p></div>
         <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"><i class="fa-brands fa-js"></i></p></div>
@@ -223,7 +412,6 @@
         <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"></p></div>
         <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"><i class="fa-brands fa-rust"></i></p></div>
        
-        <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-full bg-zinc-700 col-span-2 row-span-2">2</div>
         <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"><i class="fa-brands fa-php"></i></p></div> 
         <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"></p></div> 
         <div class="hover:bg-zinc-900/50 transition duration-500 ease-in-out w-full h-40 border border-zinc-900/60 "><p class="text-zinc-900 self-center hover:text-gray-800 text-center text-9xl"><i class="fa-brands fa-python"></i></p></div>
@@ -238,10 +426,67 @@
        
       
 </div>
-</section> 
+</section>  -->
+
+
+
+
+
+<script>
+    function searchFunction() {
+      // Declare variables
+      let input = document.getElementById('searchInput');
+      let filter = input.value.toUpperCase();
+      let ul = document.getElementById("searchResults");
+      let items = ul.getElementsByClassName('search-item');
+      
+      // Loop through all list items, and hide those who don't match the search query
+      for (let i = 0; i < items.length; i++) {
+        let title = items[i].getElementsByTagName("h1")[0];
+        if (title) {
+          let txtValue = title.textContent || title.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            items[i].style.display = "";
+          } else {
+            items[i].style.display = "none";
+          }
+        }
+      }
+    }
+
+
+    
+  </script>
+
 
     
     
-    <script src="/main.js"></script>
+  
+
+
+
+
+
+
+
+<script>
+ function myFunction() {
+  const searchInput = document.getElementById("myInput");
+  const searchTerm = searchInput.value.toLowerCase(); // Ensure case-insensitive search
+  const searchResultsContainer = document.querySelector("[data-search-results]"); // Target container for search results
+  const searchResults = searchResultsContainer.querySelectorAll("[data-search-item]"); // Select all search items
+
+  // Filter search results based on search term
+  searchResults.forEach(searchResult => {
+    const searchItemText = searchResult.textContent.toLowerCase();
+    const match = searchItemText.includes(searchTerm);
+
+    searchResult.style.display = match ? "block" : "none";
+  });
+}
+
+</script>
+
+    
 </body>
 </html>
