@@ -3,7 +3,7 @@
  description: Jackcerra is a business consulting WordPress theme perfect for anyone. The theme is integrated with Elementor, it is made with 04+ pre-built websites, 50+ elements have included and 35+ inner page. You can select any homepage style you prefer for your website.
  image: https://i.postimg.cc/Wp55c3Kk/jackcerra.png
 
- tags: ["latest","themes"]
+ tags: ["latest","theme"]
  type: Theme
  link: https://themeforest.net/item/hashtag-personal-blog-wordpress-theme/49002662
  links: [

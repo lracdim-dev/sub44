@@ -2,7 +2,7 @@
  title: Ghidra
  subtitle: Open Source Alternative to IDA
  description: Ghidra is a software reverse engineering (SRE) framework
- image: https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be5978ddae70e2ff893d_wTRafUxAab2Q6SwgZ-7Wj563M7MMid9KKvJL8Dz4fj0.png
+ image: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Ghidra_logo.svg/1200px-Ghidra_logo.svg.png
  image-alt: ghidra-logo
  license: Apache-2.0
  tags: ["cybersec","tools"]

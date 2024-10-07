@@ -3,74 +3,78 @@
  title: Free Alternatives Useful Software
 ---
 
-<section class="container grid justify-self-center rounded-3xl bg-zinc-950/50  w-full py-16">
-<p class="text-center text-gray-400 text-4xl font-normal px-[10%] pb-8">YOUR <span class="text-sky-500">FREE</span> ALL-IN-ONE SHOP FOR YOUR FAVORITE TOOLS.</p>
-<form class=" mx-auto w-[800px]">
+<section class="container grid justify-self-center rounded-3xl bg-zinc-950/50 w-full py-16">
+  <p class="text-center text-gray-400 text-4xl font-normal px-[10%] pb-8">
+    YOUR <span class="text-sky-500">FREE</span> ALL-IN-ONE SHOP FOR YOUR FAVORITE TOOLS.
+  </p>
+
+  <!-- Search Form -->
+  <form class="mx-auto w-[800px]">
     <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
     <div class="relative">
       <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
         <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
         </svg>
       </div>
-      <input type="text" id="searchInput" onkeyup="searchFunction()" class="block w-full p-4 ps-10 text-xl text-gray-900 rounded-lg bg-zinc-900 dark:placeholder-gray-400 dark:text-white" placeholder="Search . . ." required />
+      <input 
+        type="text" 
+        id="searchInput" 
+        onkeyup="searchFunction()" 
+        class="block w-full p-4 ps-10 text-xl text-gray-900 rounded-lg bg-zinc-900 dark:placeholder-gray-400 dark:text-white" 
+        placeholder="Search by title or tags . . ." 
+        required 
+      />
     </div>
   </form>
-
 </section>
-
 
 <section class="container">
   <div class="px-8 rounded-3xl bg-zinc-950/50 py-4 text-gray-400 text-lg mt-4">
     <div class="flex justify-between items-center">
       <p class="text-sky-500 text-3xl py-4 hidden">Search Results</p>
     </div>
+
+    <!-- Search Results Container -->
     <ul class="grid grid-cols-5 gap-4 w-full py-8" id="searchResults">
       {% for tools in collections.tools | reverse %}
-    
-      <a href="{{tools.url}}" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+      <a href="{{tools.url}}" 
+         class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item" 
+         data-tags="{{ tools.data.tags | join(' ') }}" 
+         data-title="{{ tools.data.title }}">
         <li class="bg-zinc-900 p-8 rounded-3xl">
-          <p class="text-pink-500 text-lg pb-4 text-right">{{tools.data.type}}</p>
-          <img src="{{tools.data.image}}" alt="{{tools.data.image-alt}}" class="w-36 rounded-full">
+          <p class="text-pink-500 text-lg pb-4 text-right">{{ tools.data.type }}</p>
+          <img src="{{ tools.data.image }}" alt="{{ tools.data.image-alt }}" class="w-36 rounded-full">
           <div class="">
-            <h1 class="text-sky-500 py-4 text-2xl">{{tools.data.title}}</h1>
+            <h1 class="text-sky-500 py-4 text-2xl">{{ tools.data.title }}</h1>
+            <p class="line-clamp-2">{{ tools.data.subtitle }}</p>
           </div>
         </li>
       </a>
-
       {% endfor %}
     </ul>
-    
   </div>
 </section>
 
-
-
-
-
-
 <script>
-    function searchFunction() {
-      // Declare variables
-      let input = document.getElementById('searchInput');
-      let filter = input.value.toUpperCase();
-      let ul = document.getElementById("searchResults");
-      let items = ul.getElementsByClassName('search-item');
-      
-      // Loop through all list items, and hide those who don't match the search query
-      for (let i = 0; i < items.length; i++) {
-        let title = items[i].getElementsByTagName("h1")[0];
-        if (title) {
-          let txtValue = title.textContent || title.innerText;
-          if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            items[i].style.display = "";
-          } else {
-            items[i].style.display = "none";
-          }
-        }
+  function searchFunction() {
+    // Get search input and convert it to uppercase for case-insensitive search
+    let input = document.getElementById('searchInput');
+    let filter = input.value.toUpperCase();
+    let ul = document.getElementById("searchResults");
+    let items = ul.getElementsByClassName('search-item');
+
+    // Loop through all list items, and show/hide those that match the search query in title or tags
+    for (let i = 0; i < items.length; i++) {
+      let title = items[i].dataset.title.toUpperCase();  // Get title attribute
+      let tags = items[i].dataset.tags.toUpperCase();    // Get tags attribute
+
+      // Check if the search term matches either the title or the tags
+      if (title.indexOf(filter) > -1 || tags.indexOf(filter) > -1) {
+        items[i].style.display = "";  // Show item
+      } else {
+        items[i].style.display = "none";  // Hide item
       }
     }
-
-
-    
-  </script>
+  }
+</script>

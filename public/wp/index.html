@@ -28,74 +28,137 @@
 </header>
 
     <div class="bg-white pt-16">
-<section class="container justify-self-center rounded-3xl bg-gray-200 h-[30vh] w-full py-4 shadow shadow-xl">
-<p class="text-center text-sky-900 text-6xl font-normal py-8 px-[10%]">DOWNLOAD THEMES & PLUGINS FOR <span class='text-sky-500'>FREE</span>.</p>
-    <form class=" mx-auto w-[800px]">   
-        <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-        <div class="relative">
-            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-                </svg>
+    <section class="container justify-self-center rounded-3xl bg-gray-200 h-[30vh] w-full py-4 shadow shadow-xl">
+        <p class="text-center text-sky-900 text-6xl font-normal py-8 px-[10%]">
+            DOWNLOAD THEMES & PLUGINS FOR <span class='text-sky-500'>FREE</span>.
+        </p>
+    
+        <!-- Search Form -->
+        <form class="mx-auto w-[800px]" id="search-form">   
+            <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+            <div class="relative">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                    </svg>
+                </div>
+                <input 
+                    type="search" 
+                    id="default-search" 
+                    class="block w-full p-4 ps-10 text-xl text-gray-900 rounded-lg bg-zinc-900 dark:placeholder-gray-400 dark:text-white" 
+                    placeholder="Search by title or tags . . ." 
+                    required 
+                    oninput="filterResults()"
+                />
+  
             </div>
-            <input type="search" id="default-search" class="block w-full p-4 ps-10 text-xl text-gray-900  rounded-lg bg-zinc-900 dark:placeholder-gray-400 dark:text-white " placeholder="Search . . ." required />
-            <button type="submit" class="text-zinc-800 absolute end-2.5 bottom-2.5 bg-sky-500 hover:bg-sky-600   rounded-lg text-lg px-8 py-2 ">Search</button>
+        </form>
+    </section>
+    
+    <!-- Results Section -->
+    <section class="container">
+        <div class="px-[10%] rounded-3xl w-full py-4 text-gray-400 text-lg mt-4">
+            <ul class="grid grid-cols-3 gap-8 w-full py-16" id="results-list">
+    
+                
+                <a href="/wp/growlab/" class="result-item" data-title="growlab v1.0.1 - business consulting wordpress theme" data-tags="wp latest theme">
+                    <li class="pb-6">
+                        <img src="https://i.postimg.cc/dDP2jLnW/growlab.png" alt="" class="w-full mx-auto">
+                        <div>
+                            <p class="text-sky-800 pt-6 pb-4 text-2xl">GrowLab v1.0.1 - Business Consulting WordPress Theme</p>
+                            <p class="line-clamp-3 text-sm">GrowLab is a consulting WordPress theme for any business companies or startups, especially for digital agencies. The overall design is crisp and clean, with unique embellishments and legible text. With beautiful homepage designs, lots of inner pages, portfolio and blog layouts, it will be a perfect option for your next project.</p>
+                            <p class="text-zinc-900 mt-4">Theme</p>
+                        </div>
+                    </li>
+                </a>
+                
+                <a href="/wp/kester/" class="result-item" data-title="kester v1.1.7 - soccer club &amp; sports news wordpress theme" data-tags="wp latest theme">
+                    <li class="pb-6">
+                        <img src="https://i.postimg.cc/SKDnxJMB/kester.png" alt="" class="w-full mx-auto">
+                        <div>
+                            <p class="text-sky-800 pt-6 pb-4 text-2xl">Kester v1.1.7 - Soccer Club &amp; Sports News WordPress Theme</p>
+                            <p class="line-clamp-3 text-sm">Kester Sports is a modern and stylish WordPress theme designed specifically for sports-related websites, such as soccer news, football, sports clubs, baseball, cricket, nfl and personal trainer websites. The theme features a clean and minimalist design with bold typography, eye-catching graphics, and a focus on imagery. It’s made by SportsPress plugin so you can easily manage match details, league standings, player details, point tables, fixture and results etc.</p>
+                            <p class="text-zinc-900 mt-4">Theme</p>
+                        </div>
+                    </li>
+                </a>
+                
+                <a href="/wp/wcpb/" class="result-item" data-title="woocommerce price by country plugin v2.0.4" data-tags="wp latest plugin">
+                    <li class="pb-6">
+                        <img src="https://i.postimg.cc/j2g5R9ny/wcpbc.jpg" alt="" class="w-full mx-auto">
+                        <div>
+                            <p class="text-sky-800 pt-6 pb-4 text-2xl">WooCommerce Price By Country Plugin v2.0.4</p>
+                            <p class="line-clamp-3 text-sm">Implement country based pricing strategy by installing Woocommerce Price by Country Plugin. Offer better price to customers keeping in mind their local factors such as currency, cost sensitivity, loyalty etc.</p>
+                            <p class="text-zinc-900 mt-4">Plugin</p>
+                        </div>
+                    </li>
+                </a>
+                
+                <a href="/wp/nestnet/" class="result-item" data-title="nestnet v1.0.0 - internet provider &amp; satellite tv wordpress theme" data-tags="wp latest theme">
+                    <li class="pb-6">
+                        <img src="https://i.postimg.cc/fLwf6nfC/nestnet.png" alt="" class="w-full mx-auto">
+                        <div>
+                            <p class="text-sky-800 pt-6 pb-4 text-2xl">Nestnet v1.0.0 - Internet Provider &amp; Satellite TV WordPress Theme</p>
+                            <p class="line-clamp-3 text-sm">Nestnet is Internet Provider and Satellite TV WordPress Theme created especially for Internet Service Provider, Satellite TV, Broadband, Online TV, Cable Television, IPTV, Telecom Company, Online Cinema. It can also be suitable for Voip, Mobile Operator, Internet and TV store, Digital TV, Online Movies,Cinema, Computer Networks and many others. It is fully responsive, retina ready and easy to customize. Nestnet has stunning styles and elements to help you make a professional website in no time. Get Nestnet now.</p>
+                            <p class="text-zinc-900 mt-4">Theme</p>
+                        </div>
+                    </li>
+                </a>
+                
+                <a href="/wp/jackcerra/" class="result-item" data-title="jackcerra v1.0.2 - business consulting wordpress theme" data-tags="wp latest theme">
+                    <li class="pb-6">
+                        <img src="https://i.postimg.cc/Wp55c3Kk/jackcerra.png" alt="" class="w-full mx-auto">
+                        <div>
+                            <p class="text-sky-800 pt-6 pb-4 text-2xl">Jackcerra v1.0.2 - Business Consulting WordPress Theme</p>
+                            <p class="line-clamp-3 text-sm">Jackcerra is a business consulting WordPress theme perfect for anyone. The theme is integrated with Elementor, it is made with 04+ pre-built websites, 50+ elements have included and 35+ inner page. You can select any homepage style you prefer for your website.</p>
+                            <p class="text-zinc-900 mt-4">Theme</p>
+                        </div>
+                    </li>
+                </a>
+                
+                <a href="/wp/hashtag/" class="result-item" data-title="hashtag v1.0.1 - personal blog wordpress theme" data-tags="wp latest theme">
+                    <li class="pb-6">
+                        <img src="https://i.postimg.cc/BbFhnYgS/hashtag.png" alt="" class="w-full mx-auto">
+                        <div>
+                            <p class="text-sky-800 pt-6 pb-4 text-2xl">Hashtag v1.0.1 - Personal Blog WordPress Theme</p>
+                            <p class="line-clamp-3 text-sm">Hashtag is a clean, modern and Creative new generation personal blog theme, dedicated to Lifestyle, Fashion, Cooking, Yoga, Cretive, Beauty and Travel. Well-structured code and easy to use documentation help you to get a great business website. Made using only the finest coding and design practices by experienced ThemeForest author with over 10 years of experience. Hashtag has stunning styles and elements to help you make professional website in no time. Get Hashtag now.</p>
+                            <p class="text-zinc-900 mt-4">Theme</p>
+                        </div>
+                    </li>
+                </a>
+                
+    
+            </ul>  
         </div>
-    </form>
-</section>
-<section class="container ">
-    <div class="px-[10%]  rounded-3xl bg-gray-200 w-full py-4 text-gray-400 text-lg mt-4">
-    <ul class="grid grid-cols-3 gap-8 w-full py-16 ">
-
-        
-        <a href="/wp/hashtag/">
-            <li class="">
-                <img src="https://i.postimg.cc/BbFhnYgS/hashtag.png" alt="NaN" class="w-full mx-auto">
-                <div>
-                    <p class="text-sky-800 pt-6 pb-4 text-2xl">Hashtag v1.0.1 - Personal Blog WordPress Theme</p>
-                    <p class="line-clamp-3 text-sm ">Hashtag is a clean, modern and Creative new generation personal blog theme, dedicated to Lifestyle, Fashion, Cooking, Yoga, Cretive, Beauty and Travel. Well-structured code and easy to use documentation help you to get a great business website. Made using only the finest coding and design practices by experienced ThemeForest author with over 10 years of experience. Hashtag has stunning styles and elements to help you make professional website in no time. Get Hashtag now.</p>
-                    <p class="text-zinc-900 mt-4">Theme</p>
-                </div>
-
-            </li>
-
-        </a>
-        
-        <a href="/wp/jackcerra/">
-            <li class="">
-                <img src="https://i.postimg.cc/Wp55c3Kk/jackcerra.png" alt="NaN" class="w-full mx-auto">
-                <div>
-                    <p class="text-sky-800 pt-6 pb-4 text-2xl">Jackcerra v1.0.2 - Business Consulting WordPress Theme</p>
-                    <p class="line-clamp-3 text-sm ">Jackcerra is a business consulting WordPress theme perfect for anyone. The theme is integrated with Elementor, it is made with 04+ pre-built websites, 50+ elements have included and 35+ inner page. You can select any homepage style you prefer for your website.</p>
-                    <p class="text-zinc-900 mt-4">Theme</p>
-                </div>
-
-            </li>
-
-        </a>
-        
-        <a href="/wp/nestnet/">
-            <li class="">
-                <img src="https://i.postimg.cc/BbFhnYgS/hashtag.png" alt="NaN" class="w-full mx-auto">
-                <div>
-                    <p class="text-sky-800 pt-6 pb-4 text-2xl">Nestnet v1.0.0 - Internet Provider &amp; Satellite TV WordPress Theme</p>
-                    <p class="line-clamp-3 text-sm ">Nestnet is Internet Provider and Satellite TV WordPress Theme created especially for Internet Service Provider, Satellite TV, Broadband, Online TV, Cable Television, IPTV, Telecom Company, Online Cinema. It can also be suitable for Voip, Mobile Operator, Internet and TV store, Digital TV, Online Movies,Cinema, Computer Networks and many others. It is fully responsive, retina ready and easy to customize. Nestnet has stunning styles and elements to help you make a professional website in no time. Get Nestnet now.</p>
-                    <p class="text-zinc-900 mt-4">Theme</p>
-                </div>
-
-            </li>
-
-        </a>
-        
-    </ul>  
-    
-    
+    </section>
     </div>
+
     
+
+
+
+    <script>
+        function filterResults() {
+            // Get the search term
+            let searchTerm = document.getElementById('default-search').value.toLowerCase();
     
+            // Get all items in the results list
+            let items = document.querySelectorAll('.result-item');
     
-</section>
-</div>
+            // Loop through the items and show/hide based on the search term
+            items.forEach(item => {
+                let title = item.getAttribute('data-title');
+                let tags = item.getAttribute('data-tags');
+                
+                // Check if the search term is in the title or tags
+                if (title.includes(searchTerm) || tags.includes(searchTerm)) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
 
     
     

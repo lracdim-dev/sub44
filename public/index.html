@@ -23,425 +23,487 @@
 </header>
 
     
-<section class="container grid justify-self-center rounded-3xl bg-zinc-950/50  w-full py-16">
-<p class="text-center text-gray-400 text-4xl font-normal px-[10%] pb-8">YOUR <span class="text-sky-500">FREE</span> ALL-IN-ONE SHOP FOR YOUR FAVORITE TOOLS.</p>
-<form class=" mx-auto w-[800px]">
+<section class="container grid justify-self-center rounded-3xl bg-zinc-950/50 w-full py-16">
+  <p class="text-center text-gray-400 text-4xl font-normal px-[10%] pb-8">
+    YOUR <span class="text-sky-500">FREE</span> ALL-IN-ONE SHOP FOR YOUR FAVORITE TOOLS.
+  </p>
+
+  <!-- Search Form -->
+  <form class="mx-auto w-[800px]">
     <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
     <div class="relative">
       <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
         <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
         </svg>
       </div>
-      <input type="text" id="searchInput" onkeyup="searchFunction()" class="block w-full p-4 ps-10 text-xl text-gray-900 rounded-lg bg-zinc-900 dark:placeholder-gray-400 dark:text-white" placeholder="Search . . ." required />
+      <input 
+        type="text" 
+        id="searchInput" 
+        onkeyup="searchFunction()" 
+        class="block w-full p-4 ps-10 text-xl text-gray-900 rounded-lg bg-zinc-900 dark:placeholder-gray-400 dark:text-white" 
+        placeholder="Search by title or tags . . ." 
+        required 
+      />
     </div>
   </form>
-
 </section>
-
 
 <section class="container">
   <div class="px-8 rounded-3xl bg-zinc-950/50 py-4 text-gray-400 text-lg mt-4">
     <div class="flex justify-between items-center">
       <p class="text-sky-500 text-3xl py-4 hidden">Search Results</p>
     </div>
+
+    <!-- Search Results Container -->
     <ul class="grid grid-cols-5 gap-4 w-full py-8" id="searchResults">
       
-    
-      <a href="/tools/ghidra/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+      <a href="/tools/ghidra/" 
+         class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item" 
+         data-tags="tools cybersec tools" 
+         data-title="Ghidra">
         <li class="bg-zinc-900 p-8 rounded-3xl">
           <p class="text-pink-500 text-lg pb-4 text-right">Cybersecurity</p>
-          <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be5978ddae70e2ff893d_wTRafUxAab2Q6SwgZ-7Wj563M7MMid9KKvJL8Dz4fj0.png" alt="NaN" class="w-36 rounded-full">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Ghidra_logo.svg/1200px-Ghidra_logo.svg.png" alt="NaN" class="w-36 rounded-full">
           <div class="">
             <h1 class="text-sky-500 py-4 text-2xl">Ghidra</h1>
+            <p class="line-clamp-2">Open Source Alternative to IDA</p>
           </div>
         </li>
       </a>
-
       
-    
-      <a href="/tools/uptime-kuma/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+      <a href="/tools/uptime-kuma/" 
+         class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item" 
+         data-tags="tools monitoring tools" 
+         data-title="Uptime Kuma">
         <li class="bg-zinc-900 p-8 rounded-3xl">
           <p class="text-pink-500 text-lg pb-4 text-right">Monitoring</p>
           <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5bf026f6859fabbd85edc_j2eF0azAstOYmrtj3oJIQ8NJ97apNZ1s3qNE4R-cNEU.jpeg" alt="NaN" class="w-36 rounded-full">
           <div class="">
             <h1 class="text-sky-500 py-4 text-2xl">Uptime Kuma</h1>
+            <p class="line-clamp-2">Open Source Alternative to Uptime Robot</p>
           </div>
         </li>
       </a>
-
       
-    
-      <a href="/tools/openpilot/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+      <a href="/tools/openpilot/" 
+         class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item" 
+         data-tags="tools automation tools" 
+         data-title="Openpilot">
         <li class="bg-zinc-900 p-8 rounded-3xl">
           <p class="text-pink-500 text-lg pb-4 text-right">Automation</p>
           <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5beacbf1f1bc1bac706fa_qZrveLVcTIrgjy_qNC1n6_pF2VTxldWtbVSULGkONVA.jpeg" alt="NaN" class="w-36 rounded-full">
           <div class="">
             <h1 class="text-sky-500 py-4 text-2xl">Openpilot</h1>
+            <p class="line-clamp-2">Open Source Alternative to Cruise, Tesla autopilot, Waymo</p>
           </div>
         </li>
       </a>
-
       
-    
-      <a href="/tools/appflowy/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+      <a href="/tools/appflowy/" 
+         class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item" 
+         data-tags="tools doc tools" 
+         data-title="Appflowy">
         <li class="bg-zinc-900 p-8 rounded-3xl">
           <p class="text-pink-500 text-lg pb-4 text-right">Documentation</p>
           <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be1e83d1292f11269ed5_gX0sarFrs_yRdricddlZfsR2tU-16ROgdLA4CVF5FX4.png" alt="NaN" class="w-36 rounded-full">
           <div class="">
             <h1 class="text-sky-500 py-4 text-2xl">Appflowy</h1>
+            <p class="line-clamp-2">Open Source Alternative to Notion</p>
           </div>
         </li>
       </a>
-
       
-    
-      <a href="/tools/traefik/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+      <a href="/tools/traefik/" 
+         class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item" 
+         data-tags="tools api tools" 
+         data-title="Traefik">
         <li class="bg-zinc-900 p-8 rounded-3xl">
           <p class="text-pink-500 text-lg pb-4 text-right">API</p>
           <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5befd0c1e15c9993408d3_pi71Id7BugfJqHCVM2RE92O32BP-9bSJfkkrOUB7cyY.png" alt="NaN" class="w-36 rounded-full">
           <div class="">
             <h1 class="text-sky-500 py-4 text-2xl">Traefik</h1>
+            <p class="line-clamp-2">Open Source Alternative to Amazon API Gateway</p>
           </div>
         </li>
       </a>
-
       
-    
-      <a href="/tools/docusaurus/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+      <a href="/tools/docusaurus/" 
+         class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item" 
+         data-tags="tools doc tools" 
+         data-title="Docusaurus">
         <li class="bg-zinc-900 p-8 rounded-3xl">
           <p class="text-pink-500 text-lg pb-4 text-right">Documentation</p>
           <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be439f7ecc38bdafe1ae_PRbCqQMHctcgKtzrN53s-aGJzCuxvK5DlzSolB_sMJk.svg" alt="NaN" class="w-36 rounded-full">
           <div class="">
             <h1 class="text-sky-500 py-4 text-2xl">Docusaurus</h1>
+            <p class="line-clamp-2">Open Source Alternative to Archbee</p>
           </div>
         </li>
       </a>
-
       
-    
-      <a href="/tools/prometheus/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+      <a href="/tools/prometheus/" 
+         class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item" 
+         data-tags="tools db tools" 
+         data-title="Prometheus">
         <li class="bg-zinc-900 p-8 rounded-3xl">
           <p class="text-pink-500 text-lg pb-4 text-right">Database</p>
           <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5bec8ba129ea8719c1eee_XbWYemaXEyjn6VXWHvE3UNL-oOjQk1uniWHPkC-wWAM.png" alt="NaN" class="w-36 rounded-full">
           <div class="">
             <h1 class="text-sky-500 py-4 text-2xl">Prometheus</h1>
+            <p class="line-clamp-2">Open Source Alternative to Datadog</p>
           </div>
         </li>
       </a>
-
       
-    
-      <a href="/tools/superset/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+      <a href="/tools/superset/" 
+         class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item" 
+         data-tags="tools db tools" 
+         data-title="Superset">
         <li class="bg-zinc-900 p-8 rounded-3xl">
           <p class="text-pink-500 text-lg pb-4 text-right">Database</p>
           <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5bef5ef7b9e2e8a9c57e7_nsMA07TT7Vi3tqYVKQ4gZcUBHqALm2wy7K12elFZDEo.png" alt="NaN" class="w-36 rounded-full">
           <div class="">
             <h1 class="text-sky-500 py-4 text-2xl">Superset</h1>
+            <p class="line-clamp-2">Open Source Alternative to Power BI, tableau, Qlik, MicroStrategy</p>
           </div>
         </li>
       </a>
-
       
-    
-      <a href="/tools/strapi/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+      <a href="/tools/strapi/" 
+         class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item" 
+         data-tags="tools cms tools" 
+         data-title="Strapi">
         <li class="bg-zinc-900 p-8 rounded-3xl">
           <p class="text-pink-500 text-lg pb-4 text-right">CMS</p>
           <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5db5969a827c27b89c710_15MSXynfRCDCpwMQ3ySbl_cl3eQxrE8Pi1ndPLSSKTY.png" alt="NaN" class="w-36 rounded-full">
           <div class="">
             <h1 class="text-sky-500 py-4 text-2xl">Strapi</h1>
+            <p class="line-clamp-2">Open Source Alternative to Contentful</p>
           </div>
         </li>
       </a>
-
       
-    
-      <a href="/tools/hoppscotch/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+      <a href="/tools/hoppscotch/" 
+         class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item" 
+         data-tags="tools api tools" 
+         data-title="Hoppscotch">
         <li class="bg-zinc-900 p-8 rounded-3xl">
           <p class="text-pink-500 text-lg pb-4 text-right">API</p>
           <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be6926f4c055e24ecf07_MueIhTFxHMZim7RQY9cP0KhnkG7OWBnKiCJGMaupcTU.png" alt="NaN" class="w-36 rounded-full">
           <div class="">
             <h1 class="text-sky-500 py-4 text-2xl">Hoppscotch</h1>
+            <p class="line-clamp-2">Open Source Alternative to Postman</p>
           </div>
         </li>
       </a>
-
       
-    
-      <a href="/tools/grafana/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+      <a href="/tools/grafana/" 
+         class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item" 
+         data-tags="tools monitoring tools" 
+         data-title="Grafana">
         <li class="bg-zinc-900 p-8 rounded-3xl">
           <p class="text-pink-500 text-lg pb-4 text-right">Monitoring</p>
           <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be60560ab02eaa952e0a_n2epjjlTS3PiwUe8HBJD9kWqA3_EnZvVznsOTNTb9XA.png" alt="NaN" class="w-36 rounded-full">
           <div class="">
             <h1 class="text-sky-500 py-4 text-2xl">Grafana</h1>
+            <p class="line-clamp-2">Open Source Alternative to Datadog, NewRelic</p>
           </div>
         </li>
       </a>
-
       
-    
-      <a href="/tools/atom/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+      <a href="/tools/atom/" 
+         class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item" 
+         data-tags="tools dev tools" 
+         data-title="Atom">
         <li class="bg-zinc-900 p-8 rounded-3xl">
           <p class="text-pink-500 text-lg pb-4 text-right">Dev</p>
           <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be21dbcfa982e5435f95_0Me_z-9TheH8NTSkigJ5RAW3wMqYwcsaE8ST3f3kOgU.png" alt="NaN" class="w-36 rounded-full">
           <div class="">
             <h1 class="text-sky-500 py-4 text-2xl">Atom</h1>
+            <p class="line-clamp-2">Open Source Alternative to Visual Studio Code, Sublime Text</p>
           </div>
         </li>
       </a>
-
       
-    
-      <a href="/tools/rustdesk/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+      <a href="/tools/rustdesk/" 
+         class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item" 
+         data-tags="tools remote tools" 
+         data-title="Rustdesk">
         <li class="bg-zinc-900 p-8 rounded-3xl">
           <p class="text-pink-500 text-lg pb-4 text-right">Remote</p>
           <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5bed678ddae3874ffca7d_AueBPXc1rFNNSB_TPErXyMqoh9deeZh8OrO-TPGGPns.png" alt="NaN" class="w-36 rounded-full">
           <div class="">
             <h1 class="text-sky-500 py-4 text-2xl">Rustdesk</h1>
+            <p class="line-clamp-2">Open Source Alternative to TeamViewer</p>
           </div>
         </li>
       </a>
-
       
-    
-      <a href="/tools/supabase/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+      <a href="/tools/supabase/" 
+         class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item" 
+         data-tags="tools backend tools" 
+         data-title="Supabase">
         <li class="bg-zinc-900 p-8 rounded-3xl">
           <p class="text-pink-500 text-lg pb-4 text-right">Backend</p>
           <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5bef4624f4d0058716c0f_VDtxBtX7cmqcMWrlcwqXwnqT35m43Tc_uzudV5i_RVU.svg" alt="NaN" class="w-36 rounded-full">
           <div class="">
             <h1 class="text-sky-500 py-4 text-2xl">Supabase</h1>
+            <p class="line-clamp-2">Open Source Alternative to Firebase</p>
           </div>
         </li>
       </a>
-
       
-    
-      <a href="/tools/netdata/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+      <a href="/tools/netdata/" 
+         class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item" 
+         data-tags="tools monitoring tools" 
+         data-title="Netdata">
         <li class="bg-zinc-900 p-8 rounded-3xl">
           <p class="text-pink-500 text-lg pb-4 text-right">Monitoring</p>
           <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be9dbf1f1b00ccc6f2d6_PTTvIwO0qH7D5x8nJ4cz8ZyEH98MJOu6-KoS6Y-Lb50.png" alt="NaN" class="w-36 rounded-full">
           <div class="">
             <h1 class="text-sky-500 py-4 text-2xl">Netdata</h1>
+            <p class="line-clamp-2">Open Source Alternative to Datadog, NewRelic</p>
           </div>
         </li>
       </a>
-
       
-    
-      <a href="/tools/core/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+      <a href="/tools/core/" 
+         class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item" 
+         data-tags="tools automation tools" 
+         data-title="Core">
         <li class="bg-zinc-900 p-8 rounded-3xl">
           <p class="text-pink-500 text-lg pb-4 text-right">Automation</p>
           <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be3b26f4c03d584ece66_dFCHvbeRTAYL4C-XUINZWLFwoFCfiXqGXAWB8tyOO64.png" alt="NaN" class="w-36 rounded-full">
           <div class="">
             <h1 class="text-sky-500 py-4 text-2xl">Core</h1>
+            <p class="line-clamp-2">Open Source Alternative to IFTTT, openHAB, Alexa, Google Home</p>
           </div>
         </li>
       </a>
-
       
-    
-      <a href="/tools/neovim/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+      <a href="/tools/neovim/" 
+         class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item" 
+         data-tags="tools dev tools" 
+         data-title="Neovim">
         <li class="bg-zinc-900 p-8 rounded-3xl">
           <p class="text-pink-500 text-lg pb-4 text-right">Dev Tools</p>
           <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be9bb0461e8ac6185877_8Z2aUh1NUeEc2RakIsLbf_dwO0Bhv2RR6PCPwwgVP70.png" alt="NaN" class="w-36 rounded-full">
           <div class="">
             <h1 class="text-sky-500 py-4 text-2xl">Neovim</h1>
+            <p class="line-clamp-2">Open Source Alternative to Sublime Text, VSCode Binaries</p>
           </div>
         </li>
       </a>
-
       
-    
-      <a href="/tools/godot/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+      <a href="/tools/godot/" 
+         class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item" 
+         data-tags="tools games tools" 
+         data-title="Godot">
         <li class="bg-zinc-900 p-8 rounded-3xl">
           <p class="text-pink-500 text-lg pb-4 text-right">Games</p>
           <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be5fa48cd54615f97807__ygyj6lM28W2fWxEYzLW0Vsse4cu2L2NgbDFtTA07kE.png" alt="NaN" class="w-36 rounded-full">
           <div class="">
             <h1 class="text-sky-500 py-4 text-2xl">Godot</h1>
+            <p class="line-clamp-2">Open Source Alternative to Unreal Engine (UE4), Unity3D</p>
           </div>
         </li>
       </a>
-
       
-    
-      <a href="/tools/rrweb/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+      <a href="/tools/rrweb/" 
+         class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item" 
+         data-tags="tools video tools" 
+         data-title="RRWeb">
         <li class="bg-zinc-900 p-8 rounded-3xl">
           <p class="text-pink-500 text-lg pb-4 text-right">Video</p>
           <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5bed5ba46915b6254b0c8_z8n7jo1ikbzu-XP75RsruFe8zgn7nrOINebs69ywApo.png" alt="NaN" class="w-36 rounded-full">
           <div class="">
             <h1 class="text-sky-500 py-4 text-2xl">RRWeb</h1>
+            <p class="line-clamp-2">Open Source Alternative to Hotjar, FullStory, LogRocket</p>
           </div>
         </li>
       </a>
-
       
-    
-      <a href="/tools/obs/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+      <a href="/tools/obs/" 
+         class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item" 
+         data-tags="tools video tools" 
+         data-title="OBS">
         <li class="bg-zinc-900 p-8 rounded-3xl">
           <p class="text-pink-500 text-lg pb-4 text-right">Video</p>
           <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5bea3217aae311abe2a9e_jHZIVysHf1VBw0147wKWYVx_SmXiGzAR0F39Yo9M4q0.png" alt="NaN" class="w-36 rounded-full">
           <div class="">
             <h1 class="text-sky-500 py-4 text-2xl">OBS</h1>
+            <p class="line-clamp-2">Open Source Alternative to Vmix</p>
           </div>
         </li>
       </a>
-
       
-    
-      <a href="/tools/mpv/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+      <a href="/tools/mpv/" 
+         class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item" 
+         data-tags="tools video tools" 
+         data-title="MPV">
         <li class="bg-zinc-900 p-8 rounded-3xl">
           <p class="text-pink-500 text-lg pb-4 text-right">Video</p>
           <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be980c1e1567e4338553_2cgsWsoPcEWG9-ONCsRjNhNhOMMQ4feaYnKOF5OwI3g.png" alt="NaN" class="w-36 rounded-full">
           <div class="">
             <h1 class="text-sky-500 py-4 text-2xl">MPV</h1>
+            <p class="line-clamp-2">Open Source Alternative to Windows media player</p>
           </div>
         </li>
       </a>
-
       
-    
-      <a href="/tools/losslesscut/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+      <a href="/tools/losslesscut/" 
+         class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item" 
+         data-tags="tools video tools" 
+         data-title="Losslesscut">
         <li class="bg-zinc-900 p-8 rounded-3xl">
           <p class="text-pink-500 text-lg pb-4 text-right">Video</p>
           <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be83b0461efef018359e_hdEBzAucOJY7_fGr7uNi1ii8p7vuiLSul1yQ_xubhoM.svg" alt="NaN" class="w-36 rounded-full">
           <div class="">
             <h1 class="text-sky-500 py-4 text-2xl">Losslesscut</h1>
+            <p class="line-clamp-2">Open Source Alternative to Adobe Premiere Pro</p>
           </div>
         </li>
       </a>
-
       
-    
-      <a href="/tools/freetube/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+      <a href="/tools/freetube/" 
+         class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item" 
+         data-tags="tools video tools" 
+         data-title="Freetube">
         <li class="bg-zinc-900 p-8 rounded-3xl">
           <p class="text-pink-500 text-lg pb-4 text-right">Video</p>
           <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be567ac0d68e5a5c9fa0_ebyjy4OPBMZb3n_1NqOmKOqFVLRyzS-Vc8icB0cYF_s.png" alt="NaN" class="w-36 rounded-full">
           <div class="">
             <h1 class="text-sky-500 py-4 text-2xl">Freetube</h1>
+            <p class="line-clamp-2">Open Source Alternative to YouTube</p>
           </div>
         </li>
       </a>
-
       
-    
-      <a href="/tools/blender/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+      <a href="/tools/blender/" 
+         class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item" 
+         data-tags="tools video tools" 
+         data-title="Blender">
         <li class="bg-zinc-900 p-8 rounded-3xl">
           <p class="text-pink-500 text-lg pb-4 text-right">Video</p>
           <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be2a9f7ecc4368afe11e_wpN2O23Egrd3wHx494hium9aZ1tOFMDivJR4tkFlS6k.png" alt="NaN" class="w-36 rounded-full">
           <div class="">
             <h1 class="text-sky-500 py-4 text-2xl">Blender</h1>
+            <p class="line-clamp-2">Open Source Alternative to Maya, 3DS MAX, Adobe Substance</p>
           </div>
         </li>
       </a>
-
       
-    
-      <a href="/tools/yetiforce/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+      <a href="/tools/yetiforce/" 
+         class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item" 
+         data-tags="tools crm tools" 
+         data-title="YetiForce">
         <li class="bg-zinc-900 p-8 rounded-3xl">
           <p class="text-pink-500 text-lg pb-4 text-right">CRM</p>
           <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5bf0e0c1e15dba73408eb_XIGrPIdbMOypBOMMr21zSrzArXrYYAbob8lnMNDjIcE-p-500.png" alt="NaN" class="w-36 rounded-full">
           <div class="">
             <h1 class="text-sky-500 py-4 text-2xl">YetiForce</h1>
+            <p class="line-clamp-2">Open Source Alternative to Odoo, SuiteCRM, ZohoCRM, VtigerCRM, HubSpot, Salesforce, SAP</p>
           </div>
         </li>
       </a>
-
       
-    
-      <a href="/tools/suitecrm/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+      <a href="/tools/suitecrm/" 
+         class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item" 
+         data-tags="tools crm tools" 
+         data-title="SuiteCRM">
         <li class="bg-zinc-900 p-8 rounded-3xl">
           <p class="text-pink-500 text-lg pb-4 text-right">CRM</p>
           <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5bef372638c42f9bfe7c7_4I9apDb_o-mfBoKYAiOi4tPAZ0FFM2pTU2rbSSJ9894.png" alt="NaN" class="w-36 rounded-full">
           <div class="">
             <h1 class="text-sky-500 py-4 text-2xl">SuiteCRM</h1>
+            <p class="line-clamp-2">Open Source Alternative to Salesforce, SAP</p>
           </div>
         </li>
       </a>
-
       
-    
-      <a href="/tools/odoo/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+      <a href="/tools/odoo/" 
+         class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item" 
+         data-tags="tools crm tools" 
+         data-title="Odoo">
         <li class="bg-zinc-900 p-8 rounded-3xl">
           <p class="text-pink-500 text-lg pb-4 text-right">CRM</p>
           <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5bea46eab50c72dc79ad6_3RstTic_eh67vLMwRorKyiPANrBPYamMw5XbTIu3MQg.png" alt="NaN" class="w-36 rounded-full">
           <div class="">
             <h1 class="text-sky-500 py-4 text-2xl">Odoo</h1>
+            <p class="line-clamp-2">Open Source Alternative to Salesforce, SAP</p>
           </div>
         </li>
       </a>
-
       
-    
-      <a href="/tools/krayin/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+      <a href="/tools/krayin/" 
+         class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item" 
+         data-tags="tools crm tools" 
+         data-title="Krayin">
         <li class="bg-zinc-900 p-8 rounded-3xl">
           <p class="text-pink-500 text-lg pb-4 text-right">CRM</p>
           <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be78ba4691d1345446ce_3M7kyc9m3sOD-c3gJdEqCWqTeCcp7PVPCqYylDCOaY8.png" alt="NaN" class="w-36 rounded-full">
           <div class="">
             <h1 class="text-sky-500 py-4 text-2xl">Krayin</h1>
+            <p class="line-clamp-2">Open Source Alternative to Suite CRM</p>
           </div>
         </li>
       </a>
-
       
-    
-      <a href="/tools/illa/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+      <a href="/tools/illa/" 
+         class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item" 
+         data-tags="tools crm tools" 
+         data-title="Illa">
         <li class="bg-zinc-900 p-8 rounded-3xl">
           <p class="text-pink-500 text-lg pb-4 text-right">CRM</p>
           <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be6ad805070ab46090bd_0IziaftCeyzL5VQFmhXc3gD_Wwqz73SzElBp97gpKpY.png" alt="NaN" class="w-36 rounded-full">
           <div class="">
             <h1 class="text-sky-500 py-4 text-2xl">Illa</h1>
+            <p class="line-clamp-2">Open Source Alternative to Retool, Powerapps, Appsheet</p>
           </div>
         </li>
       </a>
-
       
-    
-      <a href="/tools/erpnext/" class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item">
+      <a href="/tools/erpnext/" 
+         class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item" 
+         data-tags="tools crm tools" 
+         data-title="Erpnext">
         <li class="bg-zinc-900 p-8 rounded-3xl">
           <p class="text-pink-500 text-lg pb-4 text-right">CRM</p>
           <img src="https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5be49b66bece7f208d26f_XRrh9qPujFapn2HE891UakAQmp2ZmJNIGJDIyOVOZfk.png" alt="NaN" class="w-36 rounded-full">
           <div class="">
             <h1 class="text-sky-500 py-4 text-2xl">Erpnext</h1>
+            <p class="line-clamp-2">Open Source Alternative to Salesforce, SAP</p>
           </div>
         </li>
       </a>
-
       
     </ul>
-    
   </div>
 </section>
 
-
-
-
-
-
 <script>
-    function searchFunction() {
-      // Declare variables
-      let input = document.getElementById('searchInput');
-      let filter = input.value.toUpperCase();
-      let ul = document.getElementById("searchResults");
-      let items = ul.getElementsByClassName('search-item');
-      
-      // Loop through all list items, and hide those who don't match the search query
-      for (let i = 0; i < items.length; i++) {
-        let title = items[i].getElementsByTagName("h1")[0];
-        if (title) {
-          let txtValue = title.textContent || title.innerText;
-          if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            items[i].style.display = "";
-          } else {
-            items[i].style.display = "none";
-          }
-        }
+  function searchFunction() {
+    // Get search input and convert it to uppercase for case-insensitive search
+    let input = document.getElementById('searchInput');
+    let filter = input.value.toUpperCase();
+    let ul = document.getElementById("searchResults");
+    let items = ul.getElementsByClassName('search-item');
+
+    // Loop through all list items, and show/hide those that match the search query in title or tags
+    for (let i = 0; i < items.length; i++) {
+      let title = items[i].dataset.title.toUpperCase();  // Get title attribute
+      let tags = items[i].dataset.tags.toUpperCase();    // Get tags attribute
+
+      // Check if the search term matches either the title or the tags
+      if (title.indexOf(filter) > -1 || tags.indexOf(filter) > -1) {
+        items[i].style.display = "";  // Show item
+      } else {
+        items[i].style.display = "none";  // Hide item
       }
     }
-
-
-    
-  </script>
+  }
+</script>
 
 
     

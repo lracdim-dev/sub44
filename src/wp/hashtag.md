@@ -2,7 +2,7 @@
  title: Hashtag v1.0.1 - Personal Blog WordPress Theme
  description: Hashtag is a clean, modern and Creative new generation personal blog theme, dedicated to Lifestyle, Fashion, Cooking, Yoga, Cretive, Beauty and Travel. Well-structured code and easy to use documentation help you to get a great business website. Made using only the finest coding and design practices by experienced ThemeForest author with over 10 years of experience. Hashtag has stunning styles and elements to help you make professional website in no time. Get Hashtag now.
  image: https://i.postimg.cc/BbFhnYgS/hashtag.png
- tags: ["latest","themes"]
+ tags: ["latest","theme"]
  type: Theme
  link: https://themeforest.net/item/hashtag-personal-blog-wordpress-theme/49002662
  links: [
