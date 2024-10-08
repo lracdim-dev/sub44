@@ -13,9 +13,9 @@
         <p class=" text-4xl font-bold text-sky-500">{{title}}</p>
         <p>{{subtitle}}</p>
         <p>{{description}}</p>
-        <p>{{license}}</p>
+        <p>License: <span class="text-sky-500">{{license}}</span></p>
         <div class="mt-8 gap-8">
-        <a href="{{github}}" class="border border-sky-500 bg-sky-500 text-zinc-800 px-16 py-1 hover:text-sky-500 hover:bg-transparent duration-500 transition ease-in-out  rounded-full">Github</a>
+        <!-- <a href="{{github}}" class="border border-sky-500 bg-sky-500 text-zinc-800 px-16 py-1 hover:text-sky-500 hover:bg-transparent duration-500 transition ease-in-out  rounded-full">Github</a> -->
         <a href="{{link}}" class="border border-sky-500 text-sky-500 px-16 py-1 rounded-full hover:text-zinc-800 hover:bg-sky-500 duration-500 transition ease-in-out">Visit Website</a>
         </div>
     </div>
@@ -24,7 +24,7 @@
 <section class="mt-8 container bg-zinc-950 px-4 rounded-3xl">
     <p class="py-8 text-sky-500 text-2xl">Related tools . . .</p>
     <ul class="grid grid-cols-6 gap-4 w-full py-8" id="searchResults">
-        {% for tools in collections.tools | reverse %}
+        {% for tools in collections.tools  %}
         {%- if loop.index0 < 6 %}
         <a href="{{tools.url}}" 
            class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item" 
