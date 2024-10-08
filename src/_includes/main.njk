@@ -21,3 +21,25 @@
     </div>
    
 </section>
+<section class="mt-8 container bg-zinc-950 px-4 rounded-3xl">
+    <p class="py-8 text-sky-500 text-2xl">Related tools . . .</p>
+    <ul class="grid grid-cols-6 gap-4 w-full py-8" id="searchResults">
+        {% for tools in collections.tools | reverse %}
+        {%- if loop.index0 < 6 %}
+        <a href="{{tools.url}}" 
+           class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item" 
+           data-tags="{{ tools.data.tags | join(' ') }}" 
+           data-title="{{ tools.data.title }}">
+          <li class="bg-zinc-900 p-8 rounded-3xl">
+            <p class="text-pink-500 text-lg pb-4 text-right">{{ tools.data.type }}</p>
+            <img src="{{ tools.data.image }}" alt="{{ tools.data.image-alt }}" class="w-28 rounded-full">
+            <div class="">
+              <h1 class="text-sky-500 py-4 text-2xl">{{ tools.data.title }}</h1>
+              <p class="line-clamp-2">{{ tools.data.subtitle }}</p>
+            </div>
+          </li>
+        </a>
+        {% endif %}
+        {% endfor %}
+      </ul>
+</section>
