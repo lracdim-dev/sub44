@@ -5,7 +5,7 @@
  image: https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5bef5ef7b9e2e8a9c57e7_nsMA07TT7Vi3tqYVKQ4gZcUBHqALm2wy7K12elFZDEo.png
  image-alt: superset-logo
  license: Apache 2.0
- tags: ["db","tools"]
+ tags: ["database","tools"]
  type: Database
  github: https://github.com/apache/superset
  link:  https://superset.apache.org/

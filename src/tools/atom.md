@@ -6,7 +6,7 @@
  image-alt: atom-logo
  license: MIT
  tags: ["dev","tools"]
- type: Dev
+ type: Dev Tools
  github: https://github.com/atom/atom
  link:  https://github.blog/news-insights/product-news/sunsetting-atom/
  description2: Atom is a free and open-source text editor that's popular among developers and programmers. It's known for its user-friendly interface and extensive customization options, allowing users to tailor it to their specific needs. Atom is built on Electron, a framework that allows it to run on multiple platforms, including Windows, macOS, and Linux. With its built-in package manager, users can easily install and manage plugins to enhance its functionality and integrate with various tools and services.

@@ -5,7 +5,7 @@
  image: https://cdn.prod.website-files.com/6220c55c69733896bb8a4724/63f5bec8ba129ea8719c1eee_XbWYemaXEyjn6VXWHvE3UNL-oOjQk1uniWHPkC-wWAM.png
  image-alt: prometheus-logo
  license: Apache 2.0
- tags: ["db","tools"]
+ tags: ["database","tools"]
  type: Database
  github: https://github.com/prometheus/prometheus
  link:  https://prometheus.io/
