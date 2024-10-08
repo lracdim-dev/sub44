@@ -4,12 +4,12 @@
 ---
 
 <section class="container grid justify-self-center rounded-3xl bg-zinc-950/50 w-full py-16">
-  <p class="text-center text-gray-400 text-7xl font-normal px-[10%] pb-8">
+  <p class="text-center text-gray-400 text-7xl font-normal px-[10%] pb-8 max-md:text-2xl max-xl:text-3xl">
     YOUR <span class="text-sky-500">FREE</span> ALL-IN-ONE SHOP FOR YOUR FAVORITE TOOLS.
   </p>
 
   <!-- Search Form -->
-  <form class="mx-auto w-[800px]">
+  <form class="mx-auto w-[800px] max-xl:w-[80%]">
     <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
     <div class="relative">
       <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -36,7 +36,7 @@
     </div>
 
     <!-- Search Results Container -->
-    <ul class="grid grid-cols-5 gap-4 w-full py-8" id="searchResults">
+    <ul class="grid grid-cols-5 gap-4 w-full py-8 max-md:grid-cols-2 max-xl:grid-cols-3 max-sm:grid-cols-1 id="searchResults">
       {% for tools in collections.tools  %}
       <a href="{{tools.url}}" 
          class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item" 
