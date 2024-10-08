@@ -1900,6 +1900,11 @@ html{
   line-height: 1.75rem;
 }
 
+.text-8xl{
+  font-size: 6rem;
+  line-height: 1;
+}
+
 .font-bold{
   font-weight: 700;
 }
