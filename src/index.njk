@@ -2,14 +2,13 @@
  layout: base.njk
  title: Free Alternatives Useful Software
 ---
-
-<section class="container grid justify-self-center rounded-3xl bg-zinc-950/50 w-full py-16">
-  <p class="text-center text-gray-400 text-7xl font-normal px-[10%] pb-8 max-md:text-2xl max-xl:text-3xl">
+<section class="container mx-auto grid justify-self-center rounded-3xl bg-zinc-950/50 w-full py-16 px-4">
+  <p class="text-center text-gray-400 text-7xl font-normal pb-8 max-md:text-2xl max-xl:text-3xl">
     YOUR <span class="text-sky-500">FREE</span> ALL-IN-ONE SHOP FOR YOUR FAVORITE TOOLS.
   </p>
 
   <!-- Search Form -->
-  <form class="mx-auto w-[800px] max-xl:w-[80%]">
+  <form class="mx-auto w-[800px] max-xl:w-[80%] max-sm:w-[100%]">
     <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
     <div class="relative">
       <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -21,7 +20,7 @@
         type="text" 
         id="searchInput" 
         onkeyup="searchFunction()" 
-        class="block w-full p-4 ps-10 text-xl text-gray-900 rounded-lg bg-zinc-900 dark:placeholder-gray-400 dark:text-white" 
+        class="block w-full p-4 ps-10 text-xl text-gray-900 rounded-lg bg-zinc-800 dark:placeholder-gray-400 dark:text-white" 
         placeholder="Search by title or tags . . ." 
         required 
       />
@@ -29,23 +28,25 @@
   </form>
 </section>
 
-<section class="container">
+<!-- Search Results Section -->
+<section class="container mx-auto">
   <div class="px-8 rounded-3xl bg-zinc-950/50 py-4 text-gray-400 text-lg mt-4">
     <div class="flex justify-between items-center">
       <p class="text-sky-500 text-3xl py-4 hidden">Search Results</p>
     </div>
 
     <!-- Search Results Container -->
-    <ul class="grid grid-cols-5 gap-4 w-full py-8 max-md:grid-cols-2 max-xl:grid-cols-3 max-sm:grid-cols-1 id="searchResults">
-      {% for tools in collections.tools  %}
+    <ul id="searchResults" class="grid grid-cols-5 gap-4 w-full py-8 max-md:grid-cols-2 max-xl:grid-cols-3 max-sm:grid-cols-1">
+      <!-- Placeholder for Search Items -->
+      {% for tools in collections.tools %}
       <a href="{{tools.url}}" 
          class="hover:-mt-3 hover:transition hover:duration-700 hover:ease-in-out search-item" 
          data-tags="{{ tools.data.tags | join(' ') }}" 
          data-title="{{ tools.data.title }}">
         <li class="bg-zinc-900 p-8 rounded-3xl">
           <p class="text-pink-500 text-lg pb-4 text-right">{{ tools.data.type }}</p>
-          <img src="{{ tools.data.image }}" alt="{{ tools.data.image-alt }}" class="w-36 rounded-full">
-          <div class="">
+          <img src="{{ tools.data.image }}" alt="{{ tools.data.image-alt }}" class="w-36 rounded-full mx-auto">
+          <div class="text-center">
             <h1 class="text-sky-500 py-4 text-2xl">{{ tools.data.title }}</h1>
             <p class="line-clamp-2">{{ tools.data.subtitle }}</p>
           </div>
@@ -56,6 +57,7 @@
   </div>
 </section>
 
+<!-- Search Script -->
 <script>
   function searchFunction() {
     // Get search input and convert it to uppercase for case-insensitive search
