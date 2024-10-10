@@ -31,158 +31,268 @@
 
     <div class="bg-white pt-16">
     <section class="container justify-self-center rounded-3xl bg-gray-200 h-[30vh] w-full py-4 shadow shadow-xl">
-        <p class="text-center text-sky-900 text-6xl font-normal py-8 px-[10%]">
-            DOWNLOAD THEMES & PLUGINS FOR <span class='text-sky-500'>FREE</span>.
-        </p>
-    
-        <!-- Search Form -->
-        <form class="mx-auto w-[800px]" id="search-form">   
-            <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-            <div class="relative">
-                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-                    </svg>
-                </div>
-                <input 
-                    type="search" 
-                    id="default-search" 
-                    class="block w-full p-4 ps-10 text-xl text-gray-900 rounded-lg bg-zinc-900 dark:placeholder-gray-400 dark:text-white" 
-                    placeholder="Search by title or tags . . ." 
-                    required 
-                    oninput="filterResults()"
-                />
-  
+    <p class="text-center text-sky-900 text-6xl font-normal py-8 px-[10%]">
+        DOWNLOAD THEMES & PLUGINS FOR <span class='text-sky-500'>FREE</span>.
+    </p>
+
+    <!-- Search Form -->
+    <form class="mx-auto w-[800px]" id="search-form">   
+        <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+        <div class="relative">
+            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                </svg>
             </div>
-        </form>
-    </section>
-    
-    <!-- Results Section -->
-    <section class="container">
-        <div class="px-[10%] rounded-3xl w-full py-4 text-gray-400 text-lg mt-4">
-            <ul class="grid grid-cols-3 gap-8 w-full py-16" id="results-list">
-    
-                
-                <a href="/wp/wpbookit/" class="result-item" data-title="wpbookit v1.5.5 - appointment booking wordpress plugin" data-tags="wp latest plugin">
-                    <li class="pb-6">
-                        <img src="https://i.postimg.cc/bY0g8jY1/wpbookit.jpg" alt="" class="w-full mx-auto">
-                        <div>
-                            <p class="text-sky-800 pt-6 pb-4 text-2xl">WPBookit v1.5.5 - Appointment Booking WordPress Plugin</p>
-                            <p class="line-clamp-3 text-sm">WPBookit is a comprehensive appointment booking WordPress plugin designed to streamline your booking process and enhance user experience. Perfect for businesses of all sizes, WPBookit provides a seamless and efficient way to manage reservations and appointments directly from your WordPress website.</p>
-                            <p class="text-zinc-900 mt-4">Plugin</p>
-                        </div>
-                    </li>
-                </a>
-                
-                <a href="/wp/printco/" class="result-item" data-title="printco v1.0.1 - printing services wordpress theme" data-tags="wp latest theme">
-                    <li class="pb-6">
-                        <img src="https://i.postimg.cc/q7tQdhg7/printco.jpg" alt="" class="w-full mx-auto">
-                        <div>
-                            <p class="text-sky-800 pt-6 pb-4 text-2xl">Printco v1.0.1 - Printing Services WordPress Theme</p>
-                            <p class="line-clamp-3 text-sm">Printco is a printing company &amp; design services WordPress theme. This theme is also suitable for any kind of online stores such asprinting services, print company, printing tool, print shop, print store etc. and print related services. Printco theme has a beautiful and unique design that will be best suited for your business.</p>
-                            <p class="text-zinc-900 mt-4">Theme</p>
-                        </div>
-                    </li>
-                </a>
-                
-                <a href="/wp/growlab/" class="result-item" data-title="growlab v1.0.1 - business consulting wordpress theme" data-tags="wp latest theme">
-                    <li class="pb-6">
-                        <img src="https://i.postimg.cc/dDP2jLnW/growlab.png" alt="" class="w-full mx-auto">
-                        <div>
-                            <p class="text-sky-800 pt-6 pb-4 text-2xl">GrowLab v1.0.1 - Business Consulting WordPress Theme</p>
-                            <p class="line-clamp-3 text-sm">GrowLab is a consulting WordPress theme for any business companies or startups, especially for digital agencies. The overall design is crisp and clean, with unique embellishments and legible text. With beautiful homepage designs, lots of inner pages, portfolio and blog layouts, it will be a perfect option for your next project.</p>
-                            <p class="text-zinc-900 mt-4">Theme</p>
-                        </div>
-                    </li>
-                </a>
-                
-                <a href="/wp/kester/" class="result-item" data-title="kester v1.1.7 - soccer club &amp; sports news wordpress theme" data-tags="wp latest theme">
-                    <li class="pb-6">
-                        <img src="https://i.postimg.cc/SKDnxJMB/kester.png" alt="" class="w-full mx-auto">
-                        <div>
-                            <p class="text-sky-800 pt-6 pb-4 text-2xl">Kester v1.1.7 - Soccer Club &amp; Sports News WordPress Theme</p>
-                            <p class="line-clamp-3 text-sm">Kester Sports is a modern and stylish WordPress theme designed specifically for sports-related websites, such as soccer news, football, sports clubs, baseball, cricket, nfl and personal trainer websites. The theme features a clean and minimalist design with bold typography, eye-catching graphics, and a focus on imagery. It’s made by SportsPress plugin so you can easily manage match details, league standings, player details, point tables, fixture and results etc.</p>
-                            <p class="text-zinc-900 mt-4">Theme</p>
-                        </div>
-                    </li>
-                </a>
-                
-                <a href="/wp/wcpb/" class="result-item" data-title="woocommerce price by country plugin v2.0.4" data-tags="wp latest plugin">
-                    <li class="pb-6">
-                        <img src="https://i.postimg.cc/j2g5R9ny/wcpbc.jpg" alt="" class="w-full mx-auto">
-                        <div>
-                            <p class="text-sky-800 pt-6 pb-4 text-2xl">WooCommerce Price By Country Plugin v2.0.4</p>
-                            <p class="line-clamp-3 text-sm">Implement country based pricing strategy by installing Woocommerce Price by Country Plugin. Offer better price to customers keeping in mind their local factors such as currency, cost sensitivity, loyalty etc.</p>
-                            <p class="text-zinc-900 mt-4">Plugin</p>
-                        </div>
-                    </li>
-                </a>
-                
-                <a href="/wp/nestnet/" class="result-item" data-title="nestnet v1.0.0 - internet provider &amp; satellite tv wordpress theme" data-tags="wp latest theme">
-                    <li class="pb-6">
-                        <img src="https://i.postimg.cc/fLwf6nfC/nestnet.png" alt="" class="w-full mx-auto">
-                        <div>
-                            <p class="text-sky-800 pt-6 pb-4 text-2xl">Nestnet v1.0.0 - Internet Provider &amp; Satellite TV WordPress Theme</p>
-                            <p class="line-clamp-3 text-sm">Nestnet is Internet Provider and Satellite TV WordPress Theme created especially for Internet Service Provider, Satellite TV, Broadband, Online TV, Cable Television, IPTV, Telecom Company, Online Cinema. It can also be suitable for Voip, Mobile Operator, Internet and TV store, Digital TV, Online Movies,Cinema, Computer Networks and many others. It is fully responsive, retina ready and easy to customize. Nestnet has stunning styles and elements to help you make a professional website in no time. Get Nestnet now.</p>
-                            <p class="text-zinc-900 mt-4">Theme</p>
-                        </div>
-                    </li>
-                </a>
-                
-                <a href="/wp/jackcerra/" class="result-item" data-title="jackcerra v1.0.2 - business consulting wordpress theme" data-tags="wp latest theme">
-                    <li class="pb-6">
-                        <img src="https://i.postimg.cc/Wp55c3Kk/jackcerra.png" alt="" class="w-full mx-auto">
-                        <div>
-                            <p class="text-sky-800 pt-6 pb-4 text-2xl">Jackcerra v1.0.2 - Business Consulting WordPress Theme</p>
-                            <p class="line-clamp-3 text-sm">Jackcerra is a business consulting WordPress theme perfect for anyone. The theme is integrated with Elementor, it is made with 04+ pre-built websites, 50+ elements have included and 35+ inner page. You can select any homepage style you prefer for your website.</p>
-                            <p class="text-zinc-900 mt-4">Theme</p>
-                        </div>
-                    </li>
-                </a>
-                
-                <a href="/wp/hashtag/" class="result-item" data-title="hashtag v1.0.1 - personal blog wordpress theme" data-tags="wp latest theme">
-                    <li class="pb-6">
-                        <img src="https://i.postimg.cc/BbFhnYgS/hashtag.png" alt="" class="w-full mx-auto">
-                        <div>
-                            <p class="text-sky-800 pt-6 pb-4 text-2xl">Hashtag v1.0.1 - Personal Blog WordPress Theme</p>
-                            <p class="line-clamp-3 text-sm">Hashtag is a clean, modern and Creative new generation personal blog theme, dedicated to Lifestyle, Fashion, Cooking, Yoga, Cretive, Beauty and Travel. Well-structured code and easy to use documentation help you to get a great business website. Made using only the finest coding and design practices by experienced ThemeForest author with over 10 years of experience. Hashtag has stunning styles and elements to help you make professional website in no time. Get Hashtag now.</p>
-                            <p class="text-zinc-900 mt-4">Theme</p>
-                        </div>
-                    </li>
-                </a>
-                
-    
-            </ul>  
+            <input 
+                type="search" 
+                id="default-search" 
+                class="block w-full p-4 ps-10 text-xl text-gray-900 rounded-lg bg-zinc-900 dark:placeholder-gray-400 dark:text-white" 
+                placeholder="Search by title, tags, description, or type . . ." 
+                required 
+                oninput="filterResults()"
+            />
         </div>
-    </section>
+    </form>
+</section>
+
+<!-- Results Section -->
+<section class="container">
+    <div class="px-[10%] rounded-3xl w-full py-4 text-gray-400 text-lg mt-4">
+        <ul class="grid grid-cols-3 gap-8 w-full py-16" id="results-list">
+            
+            <a href="/wp/automator/" class="result-item" data-title="automatorwp v5.0.7" data-tags="wp latest plugin" data-description="the most powerful automation plugin for wordpress. automatorwp connects your wordpress plugins and puts them to work together. save time and money automating tasks with no code!" data-type="plugin">
+                <li class="pb-6">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpTxgz-FBEX4nuTs-cNstilP8zMazflfop1orQgfvAQ1Oh3fOc68f68RYFrMVv_Qll4GQ&amp;usqp=CAU" alt="" class="w-full mx-auto">
+                    <div>
+                        <p class="text-sky-800 pt-6 pb-4 text-2xl">AutomatorWP v5.0.7</p>
+                        <p class="line-clamp-3 text-sm">The most powerful automation plugin for WordPress. AutomatorWP connects your WordPress plugins and puts them to work together. Save time and money automating tasks with no code!</p>
+                        <p class="text-zinc-900 mt-4">Plugin</p>
+                    </div>
+                </li>
+            </a>
+            
+            <a href="/wp/woolentor/" class="result-item" data-title="woolentor pro v2.5.1 – woocommerce elementor addons" data-tags="wp latest plugin" data-description="woolentor pro is a woocommerce add-ons for elementor page builder. woocommerce builder is included in this plugin to build custom product pages and archive pages." data-type="plugin">
+                <li class="pb-6">
+                    <img src="https://i.ytimg.com/vi/_MOgvsZJ6uA/maxresdefault.jpg" alt="" class="w-full mx-auto">
+                    <div>
+                        <p class="text-sky-800 pt-6 pb-4 text-2xl">WooLentor Pro v2.5.1 – WooCommerce Elementor Addons</p>
+                        <p class="line-clamp-3 text-sm">WooLentor Pro is a WooCommerce Add-ons for Elementor Page Builder. WooCommerce Builder is included in this plugin to build custom product pages and archive pages.</p>
+                        <p class="text-zinc-900 mt-4">Plugin</p>
+                    </div>
+                </li>
+            </a>
+            
+            <a href="/wp/yoast/" class="result-item" data-title="ultimate addons for contact form 7 pro v1.7.4" data-tags="wp latest plugin" data-description="ultimate addons for contact form 7 pro is a powerful plugin that extends the functionality of the contact form 7 plugin, allowing you to create more advanced and customisable forms. this add-on offers many features, including multi-step forms, conditional logic, additional field types, and enhanced styling options. with its user-friendly interface, you can easily design complex forms that cater to your specific needs without any coding knowledge. ultimate addons for contact form 7 pro integrates seamlessly with popular third-party services, improving form performance and user engagement. by using this plugin, you can create professional and highly functional forms that enhance user experience and streamline data collection." data-type="plugin">
+                <li class="pb-6">
+                    <img src="https://softlabbd.com/wp-content/uploads/2022/12/Ultimate-Addons-for-Contact-Form-7.png" alt="" class="w-full mx-auto">
+                    <div>
+                        <p class="text-sky-800 pt-6 pb-4 text-2xl">Ultimate Addons for Contact Form 7 Pro v1.7.4</p>
+                        <p class="line-clamp-3 text-sm">Ultimate Addons for Contact Form 7 Pro is a powerful plugin that extends the functionality of the Contact Form 7 plugin, allowing you to create more advanced and customisable forms. This add-on offers many features, including multi-step forms, conditional logic, additional field types, and enhanced styling options. With its user-friendly interface, you can easily design complex forms that cater to your specific needs without any coding knowledge. Ultimate Addons for Contact Form 7 Pro integrates seamlessly with popular third-party services, improving form performance and user engagement. By using this plugin, you can create professional and highly functional forms that enhance user experience and streamline data collection.</p>
+                        <p class="text-zinc-900 mt-4">Plugin</p>
+                    </div>
+                </li>
+            </a>
+            
+            <a href="/wp/essential-addons-for-elementor/" class="result-item" data-title="bit form pro v2.9.1 - ultimate form builder in wordpress" data-tags="wp latest plugin" data-description="the most popular elements library for elementor. join with 1 million+ happy users &amp; improve page building experience. add powers to your page builder using our easy-to-use &amp; creative elements and make your next wordpress pages look prettier than ever before." data-type="plugin">
+                <li class="pb-6">
+                    <img src="https://i.ytimg.com/vi/uuyXfUDqRZM/maxresdefault.jpg" alt="" class="w-full mx-auto">
+                    <div>
+                        <p class="text-sky-800 pt-6 pb-4 text-2xl">Bit Form Pro v2.9.1 - Ultimate Form Builder In WordPress</p>
+                        <p class="line-clamp-3 text-sm">The Most Popular Elements Library For Elementor. Join With 1 Million+ Happy Users &amp; Improve Page Building Experience. Add powers to your page builder using our easy-to-use &amp; creative elements and make your next WordPress pages look prettier than ever before.</p>
+                        <p class="text-zinc-900 mt-4">Plugin</p>
+                    </div>
+                </li>
+            </a>
+            
+            <a href="/wp/pixel-your-site-pro/" class="result-item" data-title="pixelyoursite pro v11.0.0" data-tags="wp latest plugin" data-description="manage your facebook pixel with just a few clicks, like thousands of other on-line business owners." data-type="plugin">
+                <li class="pb-6">
+                    <img src="https://bitapps.pro/wp-content/uploads/2024/08/Bit-Apps-Commnuity-1024x538.webp" alt="" class="w-full mx-auto">
+                    <div>
+                        <p class="text-sky-800 pt-6 pb-4 text-2xl">PixelYourSite Pro v11.0.0</p>
+                        <p class="line-clamp-3 text-sm">Manage your Facebook Pixel with just a few clicks, like thousands of other on-line business owners.</p>
+                        <p class="text-zinc-900 mt-4">Plugin</p>
+                    </div>
+                </li>
+            </a>
+            
+            <a href="/wp/bit-form-pro/" class="result-item" data-title="bit form pro v2.9.1 - ultimate form builder in wordpress" data-tags="wp latest plugin" data-description="drag and drop wordpress form builder will allow you to build any kind of forms for wordpress website that you can imagine. the professional design of bit form keeps all the tools right where you want them! you can make integration among various crm and application with no zero experience." data-type="plugin">
+                <li class="pb-6">
+                    <img src="https://bitapps.pro/wp-content/uploads/2024/08/Bit-Apps-Commnuity-1024x538.webp" alt="" class="w-full mx-auto">
+                    <div>
+                        <p class="text-sky-800 pt-6 pb-4 text-2xl">Bit Form Pro v2.9.1 - Ultimate Form Builder In WordPress</p>
+                        <p class="line-clamp-3 text-sm">Drag and Drop WordPress Form Builder will allow you to build any kind of forms for WordPress website that you can imagine. The Professional design of Bit Form keeps all the tools right where you want them! You can make integration among various CRM and application with no zero experience.</p>
+                        <p class="text-zinc-900 mt-4">Plugin</p>
+                    </div>
+                </li>
+            </a>
+            
+            <a href="/wp/elementor-pro/" class="result-item" data-title="elementor pro v3.24.4 - the most advanced website builder plugin" data-tags="wp latest plugin" data-description="reach a whole new level of design with elementor, the most advanced drag &amp; drop live page builder for wordpress. any theme. any page. use elementor with your favorite or customized theme. change themes and still keep all your designs. landing pages, homepages, posts, portfolios, products. elementor can be used to design any page or custom post type." data-type="plugin">
+                <li class="pb-6">
+                    <img src="https://i.ytimg.com/vi/BmDMijxTmaM/maxresdefault.jpg" alt="" class="w-full mx-auto">
+                    <div>
+                        <p class="text-sky-800 pt-6 pb-4 text-2xl">Elementor Pro v3.24.4 - The Most Advanced Website Builder Plugin</p>
+                        <p class="line-clamp-3 text-sm">Reach a whole new level of design with Elementor, the most advanced drag &amp; drop live page builder for WordPress. Any Theme. Any Page. Use Elementor with your favorite or customized theme. Change themes and still keep all your designs. Landing pages, homepages, posts, portfolios, products. Elementor can be used to design any page or custom post type.</p>
+                        <p class="text-zinc-900 mt-4">Plugin</p>
+                    </div>
+                </li>
+            </a>
+            
+            <a href="/wp/filebird/" class="result-item" data-title="filebird v6.4 - media library folders" data-tags="wp latest plugin" data-description="do you have thousands of your files in wordpress media library? and you have trouble managing them? filebird – wordpress media library folders plugin was born to help you take your wordpress media library to the next level." data-type="plugin">
+                <li class="pb-6">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR922tUbydSdT0L7Hfi5G-FkOgeipzoYM6ZpQ&amp;s" alt="" class="w-full mx-auto">
+                    <div>
+                        <p class="text-sky-800 pt-6 pb-4 text-2xl">FileBird v6.4 - Media Library Folders</p>
+                        <p class="line-clamp-3 text-sm">Do you have thousands of your files in WordPress media library? And you have trouble managing them? FileBird – WordPress Media Library Folders plugin was born to help you take your WordPress media library to the next level.</p>
+                        <p class="text-zinc-900 mt-4">Plugin</p>
+                    </div>
+                </li>
+            </a>
+            
+            <a href="/wp/master-study-lms/" class="result-item" data-title="masterstudy lms learning management system pro v4.5." data-tags="wp latest plugin" data-description="transform your knowledge into a successful e-learning business by using a next-gen education platform. masterstudy lms plugin makes it simple to create and sell online courses on your own personal wordpress site without any restrictions!" data-type="plugin">
+                <li class="pb-6">
+                    <img src="https://i.postimg.cc/bvY3nYNz/master.jpg" alt="" class="w-full mx-auto">
+                    <div>
+                        <p class="text-sky-800 pt-6 pb-4 text-2xl">MasterStudy LMS Learning Management System PRO v4.5.</p>
+                        <p class="line-clamp-3 text-sm">Transform your knowledge into a successful e-learning business by using a next-gen education platform. MasterStudy LMS plugin makes it simple to create and sell online courses on your own personal WordPress site without any restrictions!</p>
+                        <p class="text-zinc-900 mt-4">Plugin</p>
+                    </div>
+                </li>
+            </a>
+            
+            <a href="/wp/happy-addons-pro/" class="result-item" data-title="happy elementor addons pro v3.12.4" data-tags="wp latest plugin" data-description="bring your creative web designing imaginations to life with happy elementor addons – a complete package for every level of users. with its extraordinary features, now you can do stuff once possible only by professionals." data-type="plugin">
+                <li class="pb-6">
+                    <img src="https://i.imgur.com/Iz2hzfz.jpg" alt="" class="w-full mx-auto">
+                    <div>
+                        <p class="text-sky-800 pt-6 pb-4 text-2xl">Happy Elementor Addons Pro v3.12.4</p>
+                        <p class="line-clamp-3 text-sm">Bring Your Creative Web Designing Imaginations to life with Happy Elementor Addons – a complete package for every level of users. With its extraordinary features, now you can do stuff once possible only by professionals.</p>
+                        <p class="text-zinc-900 mt-4">Plugin</p>
+                    </div>
+                </li>
+            </a>
+            
+            <a href="/wp/wpbookit/" class="result-item" data-title="wpbookit v1.5.5 - appointment booking wordpress plugin" data-tags="wp latest plugin" data-description="wpbookit is a comprehensive appointment booking wordpress plugin designed to streamline your booking process and enhance user experience. perfect for businesses of all sizes, wpbookit provides a seamless and efficient way to manage reservations and appointments directly from your wordpress website." data-type="plugin">
+                <li class="pb-6">
+                    <img src="https://i.postimg.cc/bY0g8jY1/wpbookit.jpg" alt="" class="w-full mx-auto">
+                    <div>
+                        <p class="text-sky-800 pt-6 pb-4 text-2xl">WPBookit v1.5.5 - Appointment Booking WordPress Plugin</p>
+                        <p class="line-clamp-3 text-sm">WPBookit is a comprehensive appointment booking WordPress plugin designed to streamline your booking process and enhance user experience. Perfect for businesses of all sizes, WPBookit provides a seamless and efficient way to manage reservations and appointments directly from your WordPress website.</p>
+                        <p class="text-zinc-900 mt-4">Plugin</p>
+                    </div>
+                </li>
+            </a>
+            
+            <a href="/wp/printco/" class="result-item" data-title="printco v1.0.1 - printing services wordpress theme" data-tags="wp latest theme" data-description="printco is a printing company &amp; design services wordpress theme. this theme is also suitable for any kind of online stores such asprinting services, print company, printing tool, print shop, print store etc. and print related services. printco theme has a beautiful and unique design that will be best suited for your business." data-type="theme">
+                <li class="pb-6">
+                    <img src="https://i.postimg.cc/q7tQdhg7/printco.jpg" alt="" class="w-full mx-auto">
+                    <div>
+                        <p class="text-sky-800 pt-6 pb-4 text-2xl">Printco v1.0.1 - Printing Services WordPress Theme</p>
+                        <p class="line-clamp-3 text-sm">Printco is a printing company &amp; design services WordPress theme. This theme is also suitable for any kind of online stores such asprinting services, print company, printing tool, print shop, print store etc. and print related services. Printco theme has a beautiful and unique design that will be best suited for your business.</p>
+                        <p class="text-zinc-900 mt-4">Theme</p>
+                    </div>
+                </li>
+            </a>
+            
+            <a href="/wp/growlab/" class="result-item" data-title="growlab v1.0.1 - business consulting wordpress theme" data-tags="wp latest theme" data-description="growlab is a consulting wordpress theme for any business companies or startups, especially for digital agencies. the overall design is crisp and clean, with unique embellishments and legible text. with beautiful homepage designs, lots of inner pages, portfolio and blog layouts, it will be a perfect option for your next project." data-type="theme">
+                <li class="pb-6">
+                    <img src="https://i.postimg.cc/dDP2jLnW/growlab.png" alt="" class="w-full mx-auto">
+                    <div>
+                        <p class="text-sky-800 pt-6 pb-4 text-2xl">GrowLab v1.0.1 - Business Consulting WordPress Theme</p>
+                        <p class="line-clamp-3 text-sm">GrowLab is a consulting WordPress theme for any business companies or startups, especially for digital agencies. The overall design is crisp and clean, with unique embellishments and legible text. With beautiful homepage designs, lots of inner pages, portfolio and blog layouts, it will be a perfect option for your next project.</p>
+                        <p class="text-zinc-900 mt-4">Theme</p>
+                    </div>
+                </li>
+            </a>
+            
+            <a href="/wp/kester/" class="result-item" data-title="kester v1.1.7 - soccer club &amp; sports news wordpress theme" data-tags="wp latest theme" data-description="kester sports is a modern and stylish wordpress theme designed specifically for sports-related websites, such as soccer news, football, sports clubs, baseball, cricket, nfl and personal trainer websites. the theme features a clean and minimalist design with bold typography, eye-catching graphics, and a focus on imagery. it’s made by sportspress plugin so you can easily manage match details, league standings, player details, point tables, fixture and results etc." data-type="theme">
+                <li class="pb-6">
+                    <img src="https://i.postimg.cc/SKDnxJMB/kester.png" alt="" class="w-full mx-auto">
+                    <div>
+                        <p class="text-sky-800 pt-6 pb-4 text-2xl">Kester v1.1.7 - Soccer Club &amp; Sports News WordPress Theme</p>
+                        <p class="line-clamp-3 text-sm">Kester Sports is a modern and stylish WordPress theme designed specifically for sports-related websites, such as soccer news, football, sports clubs, baseball, cricket, nfl and personal trainer websites. The theme features a clean and minimalist design with bold typography, eye-catching graphics, and a focus on imagery. It’s made by SportsPress plugin so you can easily manage match details, league standings, player details, point tables, fixture and results etc.</p>
+                        <p class="text-zinc-900 mt-4">Theme</p>
+                    </div>
+                </li>
+            </a>
+            
+            <a href="/wp/wcpb/" class="result-item" data-title="woocommerce price by country plugin v2.0.4" data-tags="wp latest plugin" data-description="implement country based pricing strategy by installing woocommerce price by country plugin. offer better price to customers keeping in mind their local factors such as currency, cost sensitivity, loyalty etc." data-type="plugin">
+                <li class="pb-6">
+                    <img src="https://i.postimg.cc/j2g5R9ny/wcpbc.jpg" alt="" class="w-full mx-auto">
+                    <div>
+                        <p class="text-sky-800 pt-6 pb-4 text-2xl">WooCommerce Price By Country Plugin v2.0.4</p>
+                        <p class="line-clamp-3 text-sm">Implement country based pricing strategy by installing Woocommerce Price by Country Plugin. Offer better price to customers keeping in mind their local factors such as currency, cost sensitivity, loyalty etc.</p>
+                        <p class="text-zinc-900 mt-4">Plugin</p>
+                    </div>
+                </li>
+            </a>
+            
+            <a href="/wp/nestnet/" class="result-item" data-title="nestnet v1.0.0 - internet provider &amp; satellite tv wordpress theme" data-tags="wp latest theme" data-description="nestnet is internet provider and satellite tv wordpress theme created especially for internet service provider, satellite tv, broadband, online tv, cable television, iptv, telecom company, online cinema. it can also be suitable for voip, mobile operator, internet and tv store, digital tv, online movies,cinema, computer networks and many others. it is fully responsive, retina ready and easy to customize. nestnet has stunning styles and elements to help you make a professional website in no time. get nestnet now." data-type="theme">
+                <li class="pb-6">
+                    <img src="https://i.postimg.cc/fLwf6nfC/nestnet.png" alt="" class="w-full mx-auto">
+                    <div>
+                        <p class="text-sky-800 pt-6 pb-4 text-2xl">Nestnet v1.0.0 - Internet Provider &amp; Satellite TV WordPress Theme</p>
+                        <p class="line-clamp-3 text-sm">Nestnet is Internet Provider and Satellite TV WordPress Theme created especially for Internet Service Provider, Satellite TV, Broadband, Online TV, Cable Television, IPTV, Telecom Company, Online Cinema. It can also be suitable for Voip, Mobile Operator, Internet and TV store, Digital TV, Online Movies,Cinema, Computer Networks and many others. It is fully responsive, retina ready and easy to customize. Nestnet has stunning styles and elements to help you make a professional website in no time. Get Nestnet now.</p>
+                        <p class="text-zinc-900 mt-4">Theme</p>
+                    </div>
+                </li>
+            </a>
+            
+            <a href="/wp/jackcerra/" class="result-item" data-title="jackcerra v1.0.2 - business consulting wordpress theme" data-tags="wp latest theme" data-description="jackcerra is a business consulting wordpress theme perfect for anyone. the theme is integrated with elementor, it is made with 04+ pre-built websites, 50+ elements have included and 35+ inner page. you can select any homepage style you prefer for your website." data-type="theme">
+                <li class="pb-6">
+                    <img src="https://i.postimg.cc/Wp55c3Kk/jackcerra.png" alt="" class="w-full mx-auto">
+                    <div>
+                        <p class="text-sky-800 pt-6 pb-4 text-2xl">Jackcerra v1.0.2 - Business Consulting WordPress Theme</p>
+                        <p class="line-clamp-3 text-sm">Jackcerra is a business consulting WordPress theme perfect for anyone. The theme is integrated with Elementor, it is made with 04+ pre-built websites, 50+ elements have included and 35+ inner page. You can select any homepage style you prefer for your website.</p>
+                        <p class="text-zinc-900 mt-4">Theme</p>
+                    </div>
+                </li>
+            </a>
+            
+            <a href="/wp/hashtag/" class="result-item" data-title="hashtag v1.0.1 - personal blog wordpress theme" data-tags="wp latest theme" data-description="hashtag is a clean, modern and creative new generation personal blog theme, dedicated to lifestyle, fashion, cooking, yoga, cretive, beauty and travel. well-structured code and easy to use documentation help you to get a great business website. made using only the finest coding and design practices by experienced themeforest author with over 10 years of experience. hashtag has stunning styles and elements to help you make professional website in no time. get hashtag now." data-type="theme">
+                <li class="pb-6">
+                    <img src="https://i.postimg.cc/BbFhnYgS/hashtag.png" alt="" class="w-full mx-auto">
+                    <div>
+                        <p class="text-sky-800 pt-6 pb-4 text-2xl">Hashtag v1.0.1 - Personal Blog WordPress Theme</p>
+                        <p class="line-clamp-3 text-sm">Hashtag is a clean, modern and Creative new generation personal blog theme, dedicated to Lifestyle, Fashion, Cooking, Yoga, Cretive, Beauty and Travel. Well-structured code and easy to use documentation help you to get a great business website. Made using only the finest coding and design practices by experienced ThemeForest author with over 10 years of experience. Hashtag has stunning styles and elements to help you make professional website in no time. Get Hashtag now.</p>
+                        <p class="text-zinc-900 mt-4">Theme</p>
+                    </div>
+                </li>
+            </a>
+            
+        </ul>  
     </div>
+</section>
 
-    
+<script>
+    function filterResults() {
+        // Get the search term
+        let searchTerm = document.getElementById('default-search').value.toLowerCase();
 
+        // Get all items in the results list
+        let items = document.querySelectorAll('.result-item');
 
+        // Loop through the items and show/hide based on the search term
+        items.forEach(item => {
+            let title = item.getAttribute('data-title');
+            let tags = item.getAttribute('data-tags');
+            let description = item.getAttribute('data-description');
+            let type = item.getAttribute('data-type');
+            
+            // Check if the search term is in the title, tags, description, or type
+            if (
+                title.includes(searchTerm) || 
+                tags.includes(searchTerm) || 
+                description.includes(searchTerm) || 
+                type.includes(searchTerm)
+            ) {
+                item.style.display = '';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+</script>
 
-    <script>
-        function filterResults() {
-            // Get the search term
-            let searchTerm = document.getElementById('default-search').value.toLowerCase();
-    
-            // Get all items in the results list
-            let items = document.querySelectorAll('.result-item');
-    
-            // Loop through the items and show/hide based on the search term
-            items.forEach(item => {
-                let title = item.getAttribute('data-title');
-                let tags = item.getAttribute('data-tags');
-                
-                // Check if the search term is in the title or tags
-                if (title.includes(searchTerm) || tags.includes(searchTerm)) {
-                    item.style.display = '';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        }
-    </script>
 
     <footer class="mt-16 bg-black text-zinc-400">
     <div  class="container grid grid-cols-2 py-16 max-xl:grid-cols-1 px-4">
@@ -196,5 +306,9 @@
 <p class="text-center bg-zinc-950 py-4 text-zinc-500"> SUB44 | @2024</p>
 </footer>
     
+    <script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

@@ -4,78 +4,77 @@
 ---
 <div class="bg-white pt-16">
     <section class="container justify-self-center rounded-3xl bg-gray-200 h-[30vh] w-full py-4 shadow shadow-xl">
-        <p class="text-center text-sky-900 text-6xl font-normal py-8 px-[10%]">
-            DOWNLOAD THEMES & PLUGINS FOR <span class='text-sky-500'>FREE</span>.
-        </p>
-    
-        <!-- Search Form -->
-        <form class="mx-auto w-[800px]" id="search-form">   
-            <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-            <div class="relative">
-                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-                    </svg>
-                </div>
-                <input 
-                    type="search" 
-                    id="default-search" 
-                    class="block w-full p-4 ps-10 text-xl text-gray-900 rounded-lg bg-zinc-900 dark:placeholder-gray-400 dark:text-white" 
-                    placeholder="Search by title or tags . . ." 
-                    required 
-                    oninput="filterResults()"
-                />
-  
+    <p class="text-center text-sky-900 text-6xl font-normal py-8 px-[10%]">
+        DOWNLOAD THEMES & PLUGINS FOR <span class='text-sky-500'>FREE</span>.
+    </p>
+
+    <!-- Search Form -->
+    <form class="mx-auto w-[800px]" id="search-form">   
+        <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+        <div class="relative">
+            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                </svg>
             </div>
-        </form>
-    </section>
-    
-    <!-- Results Section -->
-    <section class="container">
-        <div class="px-[10%] rounded-3xl w-full py-4 text-gray-400 text-lg mt-4">
-            <ul class="grid grid-cols-3 gap-8 w-full py-16" id="results-list">
-    
-                {% for wp in collections.latest | reverse %}
-                <a href="{{ wp.url }}" class="result-item" data-title="{{ wp.data.title | lower }}" data-tags="{{ wp.data.tags | join(' ') | lower }}">
-                    <li class="pb-6">
-                        <img src="{{ wp.data.image }}" alt="{{ wp.data.image_alt }}" class="w-full mx-auto">
-                        <div>
-                            <p class="text-sky-800 pt-6 pb-4 text-2xl">{{ wp.data.title }}</p>
-                            <p class="line-clamp-3 text-sm">{{ wp.data.description }}</p>
-                            <p class="text-zinc-900 mt-4">{{ wp.data.type }}</p>
-                        </div>
-                    </li>
-                </a>
-                {% endfor %}
-    
-            </ul>  
+            <input 
+                type="search" 
+                id="default-search" 
+                class="block w-full p-4 ps-10 text-xl text-gray-900 rounded-lg bg-zinc-900 dark:placeholder-gray-400 dark:text-white" 
+                placeholder="Search by title, tags, description, or type . . ." 
+                required 
+                oninput="filterResults()"
+            />
         </div>
-    </section>
+    </form>
+</section>
+
+<!-- Results Section -->
+<section class="container">
+    <div class="px-[10%] rounded-3xl w-full py-4 text-gray-400 text-lg mt-4">
+        <ul class="grid grid-cols-3 gap-8 w-full py-16" id="results-list">
+            {% for wp in collections.latest | reverse %}
+            <a href="{{ wp.url }}" class="result-item" data-title="{{ wp.data.title | lower }}" data-tags="{{ wp.data.tags | join(' ') | lower }}" data-description="{{ wp.data.description | lower }}" data-type="{{ wp.data.type | lower }}">
+                <li class="pb-6">
+                    <img src="{{ wp.data.image }}" alt="{{ wp.data.image_alt }}" class="w-full mx-auto">
+                    <div>
+                        <p class="text-sky-800 pt-6 pb-4 text-2xl">{{ wp.data.title }}</p>
+                        <p class="line-clamp-3 text-sm">{{ wp.data.description }}</p>
+                        <p class="text-zinc-900 mt-4">{{ wp.data.type }}</p>
+                    </div>
+                </li>
+            </a>
+            {% endfor %}
+        </ul>  
     </div>
+</section>
 
-    
+<script>
+    function filterResults() {
+        // Get the search term
+        let searchTerm = document.getElementById('default-search').value.toLowerCase();
 
+        // Get all items in the results list
+        let items = document.querySelectorAll('.result-item');
 
-
-    <script>
-        function filterResults() {
-            // Get the search term
-            let searchTerm = document.getElementById('default-search').value.toLowerCase();
-    
-            // Get all items in the results list
-            let items = document.querySelectorAll('.result-item');
-    
-            // Loop through the items and show/hide based on the search term
-            items.forEach(item => {
-                let title = item.getAttribute('data-title');
-                let tags = item.getAttribute('data-tags');
-                
-                // Check if the search term is in the title or tags
-                if (title.includes(searchTerm) || tags.includes(searchTerm)) {
-                    item.style.display = '';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        }
-    </script>
+        // Loop through the items and show/hide based on the search term
+        items.forEach(item => {
+            let title = item.getAttribute('data-title');
+            let tags = item.getAttribute('data-tags');
+            let description = item.getAttribute('data-description');
+            let type = item.getAttribute('data-type');
+            
+            // Check if the search term is in the title, tags, description, or type
+            if (
+                title.includes(searchTerm) || 
+                tags.includes(searchTerm) || 
+                description.includes(searchTerm) || 
+                type.includes(searchTerm)
+            ) {
+                item.style.display = '';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+</script>
